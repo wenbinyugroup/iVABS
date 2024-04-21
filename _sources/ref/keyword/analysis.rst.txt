@@ -1,0 +1,189 @@
+.. _kw-analysis:
+
+
+
+analysis
+========================
+
+..  code-block:: yaml
+    :caption: Overview
+    :linenos:
+
+    analysis:
+      steps:
+        - step: "step 1"
+          type: "cs"
+          ...
+        - step: "step 2"
+          ...
+
+
+``steps``
+----------
+
+Specification of analysis steps.
+
+* **Required** (at least one step)
+* **Type**: List
+* **Default**: None
+
+
+
+
+``step``
+-----------
+
+Name of the current step.
+
+* **Required**
+* **Type**: String
+
+
+
+
+
+``type``
+-----------
+
+Type of the current analysis step.
+
+* **Required**
+* **Type**: String
+* **Arguments**: cs\|script
+
+``cs`` defines a cross-sectional analysis step.
+``script`` defines a custom step using user-provided Python scripts.
+
+Related pages
+
+* :ref:`section-guide_analysis_script`
+
+
+
+
+``analysis``
+---------------
+
+Use under::
+
+    analysis:
+      steps:
+        - step: "..."
+          type: "cs"
+          analysis: "..."
+
+Specify the cross-sectional analysis type.
+
+* **Required**
+* **Type**: String
+* **Arguments**: h\|fi
+
+
+
+
+``file``
+----------
+
+Use under::
+
+    analysis:
+      steps:
+        - step: "..."
+          type: "script"
+          file: "..."
+
+Name of the custom Python script file.
+
+* **Required**
+* **Type**: String
+
+Related pages
+
+* :ref:`section-guide_analysis_script`
+
+
+
+
+``function``
+--------------
+
+Use under::
+
+    analysis:
+      steps:
+        - step: "..."
+          type: "script"
+          function: "..."
+
+Name of the custom Python function.
+
+* **Required**
+* **Type**: String
+
+Related pages
+
+* :ref:`section-guide_analysis_script`
+
+
+
+
+``args``
+-----------
+
+Use under::
+
+    analysis:
+      steps:
+        - step: "..."
+          type: "script"
+          args:
+            - arg1
+            - arg2
+            - ...
+
+Extra positional arguments passed to the custom Python function.
+
+* **Optional**
+* **Type**: List
+
+Related pages
+
+* :ref:`section-guide_analysis_script`
+
+
+
+
+``kwargs``
+-------------
+
+Use under::
+
+    analysis:
+      steps:
+        - step: "..."
+          type: "script"
+          kwargs:
+            kw1: arg1
+            kw2: arg2
+            ...
+
+Extra keyword arguments passed to the custom Python function.
+
+* **Optional**
+* **Type**: Dictionary
+
+Related pages
+
+* :ref:`section-guide_analysis_script`
+
+
+
+
+
+..  literalinclude:: /_static/main_input_ref.yml
+    :caption: Example
+    :language: yaml
+    :start-after: [analysis]
+    :end-before: [analysis_end]
+    :linenos:
+

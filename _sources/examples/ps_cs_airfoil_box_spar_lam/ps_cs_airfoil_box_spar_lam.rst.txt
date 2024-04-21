@@ -1,0 +1,34 @@
+.. _example-ps_cs_airfoil_box_spar_lam:
+
+Parameter study of a spar laminate of an airfoil cross-section
+================================================================
+
+Problem description
+-------------------
+
+This example studies the effects of variation of spar layups on the beam properties.
+
+
+Design variables
+------------------
+
+This example considers a box spar structure as the base design.
+See :ref:`section-ivabs_temp_airfoil_gbox_uni` for more details of this base design.
+Cross-sections with an airfoil SC1095 are studied.
+The spar has a width of 20% of the chord length, spanning from 60% to 80% of the chord.
+The spar is made of long fiber reinforced composites and regions before and after the spar are filled with a honeycomb material.
+Origin of the reference frame for cross-sectional analysis is placed at the quarter chord for all designs.
+
+Two parameters are considered to inspect their effects on beam properties: fiber angle and layer thickness of the spar.
+The fiber angle varies from -90 to 90 degrees.
+The number of plies of the composite lamina is used to parameterize the layer thickness, which can be a value from a series of integer numbers.
+A full factorial sampling method is used to generate specific cross-sectional designs in the 2D design space and call cross-sectional analyses.
+Widely used beam properties such as stiffness and shear center are considered, whose values are recorded for each specific set of design parameters.
+
+
+
+Result
+--------
+
+
+

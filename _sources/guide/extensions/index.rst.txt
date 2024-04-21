@@ -1,0 +1,10 @@
+.. _section-extensions:
+
+Extensions
+========================
+
+..  toctree::
+    :maxdepth: 1
+
+    custom_script
+    galaxy_rcas

@@ -1,0 +1,26 @@
+.. _section-start-ivabs-vabs:
+
+Cross-sectional Analysis and VABS Convention
+==============================================
+
+..  figure:: /figures/ivabs_method.png
+    :name: fig-ivabs_method
+    :width: 6in
+    :align: center
+
+    VABS-based analysis method.
+
+..  figure:: /figures/ivabs_beam.png
+    :name: fig-ivabs_beam
+    :width: 6in
+    :align: center
+
+    Relation between the beam and cross-sectional coordinate system.
+
+..  figure:: /figures/ivabs_cs_prop_frame.png
+    :name: fig-ivabs_cs_prop_frame
+    :width: 6in
+    :align: center
+
+    Beam property.
+

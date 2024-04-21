@@ -1,0 +1,36 @@
+.. _kw-parameter:
+
+parameter
+=========
+
+
+Key-value pairs of the design parameters.
+
+
+
+
+Specification
+-------------
+
+**Arguments**: ``key: value`` pairs
+
+**Default**: None
+
+
+
+
+Example
+-------
+
+..  code-block:: yaml
+    :linenos:
+
+    parameter:
+      param1: "value1"
+      param2: 2
+      param3: 3.0
+      param4: 4e5
+      param5: true  # or on
+      param6: false  # or off
+
+

@@ -1,0 +1,4 @@
+.. _example-ps_cs_box_lam:
+
+..  include:: /../../examples/ps_cs_box_lam/README.rst
+

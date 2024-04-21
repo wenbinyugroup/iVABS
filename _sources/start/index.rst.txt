@@ -1,0 +1,14 @@
+.. _section-start:
+
+Getting Started
+========================
+
+..  toctree::
+    :maxdepth: 2
+
+    install/index
+    ivabs/vabs_intro
+    ivabs/getstart
+
+
+..    ivabs/introduction

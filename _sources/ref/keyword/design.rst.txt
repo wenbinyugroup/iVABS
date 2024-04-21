@@ -1,0 +1,20 @@
+.. _kw-design:
+
+design
+======
+
+
+Basic design setup of the structure.
+
+* **Optional**
+* **Type**: Dictionary
+
+
+
+
+..  literalinclude:: /_static/main_input_ref.yml
+    :caption: Example
+    :language: yaml
+    :start-after: [structure]
+    :end-before: [structure_end]
+    :linenos:

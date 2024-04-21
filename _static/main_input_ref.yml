@@ -1,0 +1,115 @@
+# [begin]
+
+version: "0.9"
+
+# [structure]
+
+structure:
+  name: "uh60_blade_1"
+  parameter:
+    cs_template: 'airfoil_gbox_uni.xml.tmp'
+    airfoil: 'SC1095.dat'
+    a2p1: 0.8
+    a2p3: 0.6
+    airfoil_point_order: -1
+    lam_skin: "T300 15k/976_0.0053"
+    lam_cap: "Aluminum 8009_0.01"
+    lam_spar: "T300 15k/976_0.0053"
+    lam_front: "T300 15k/976_0.0053"
+    lam_back: "T300 15k/976_0.0053"
+    ssc_spar: "[-45/0/45/90]"
+  design:
+    type: 'discrete'
+    dim: 1
+    cs_assignment:
+      all: 'main_cs'
+  cs:
+    main_cs:
+      base: 'cs'
+      model: 'md1'
+
+# [structure_end]
+
+# [function]
+
+function:
+
+# [function_end]
+
+# [sg]
+
+cs:
+- name: "cs"
+  parameter:
+    cs_template: 'airfoil_gbox_uni.xml.tmp'
+    mdb_name: "material_database_us_ft"
+    rnsm: 0.001
+    gms: 0.004
+    mat_nsm: "lead"
+    mat_fill_front: "Rohacell 70"
+    mat_fill_back: "Plascore PN2-3/16OX3.0"
+    mat_fill_te: "Plascore PN2-3/16OX3.0"
+  design:
+    dim: 2
+    tool: 'prevabs_153_dev'
+    base_file: cs_template
+  model:
+    md1:
+      tool: 'vabs'
+
+# [sg_end]
+
+# [analysis]
+
+analysis:
+  steps:
+    - step: "cs analysis"
+      type: 'cs'
+      analysis: 'h'
+    - step: "calc diff"
+      type: "script"
+      file: 'data_proc_funcs'
+      function: "dakota_postpro"
+      kwargs:
+        beam_properties: ["gj", "ei22", "ei33"]
+        target: [2.29e3, 3.98e3, 2.44e5]
+
+# [analysis_end]
+
+# [study]
+
+study:
+  method:
+    format: "keyword"
+    output: "normal"
+    soga:
+      max_function_evaluations: 10
+      population_size: 5
+      seed: 1027
+      print_each_pop: true
+  variables:
+    data_form: "compact"
+    data: |
+      a2p1, design, continuous, 0.7:0.9
+      a2p3, design, continuous, 0.5:0.7
+  responses:
+    data_form: "compact"
+    data: |
+      diff_gj,   objective, min, 0.5
+      diff_eiyy, objective, min, 0.8
+      diff_eizz, objective, min, 0.8
+  interface:
+    fork:
+      parameters_file: "input.in"
+      results_file: "output.out"
+      file_save: on
+      work_directory:
+        directory_tag: on
+        directory_save: on
+    required_files:
+      - "design/*"
+      - "scripts/*"
+
+# [study_end]
+
+# [end]

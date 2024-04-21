@@ -1,0 +1,83 @@
+.. _kw-sg:
+
+|sg_key|
+==========================
+
+This block contains a list of cross-sectional base designs.
+
+..  code-block:: yaml
+    :caption: Overview
+    :linenos:
+
+    cs:
+      - name: "cs_base_design_1"
+        ...
+      - name: "cs_base_design_2"
+        ...
+
+
+``name``
+---------
+
+Name of the cross-sectional base design.
+
+* **Required**
+* **Type**: String
+* **Arguments**: Arbitrary
+* **Default**: None
+
+
+
+``parameter``
+---------------
+
+Key-value pairs of the design parameters for the current CS.
+
+* **Optional**
+* **Type**: Dictionary
+* **Arguments**: ``key: value`` pairs
+* **Default**: None
+
+
+
+``design``
+------------
+
+Basic design setup of the current CS.
+
+* **Optional**
+* **Type**: Dictionary
+
+
+
+``tool``
+------------
+
+PreVABS command used to create the cross-section.
+
+* **Optional**
+* **Type**: String
+* **Default**: prevabs
+
+
+
+``base_file``
+----------------
+
+File name of the cross-sectional design template.
+
+* **Required**
+* **Type**: String
+* **Default**: None
+
+
+
+
+..  literalinclude:: /_static/main_input_ref.yml
+    :caption: Example
+    :language: yaml
+    :start-after: [sg]
+    :end-before: [sg_end]
+    :linenos:
+
+

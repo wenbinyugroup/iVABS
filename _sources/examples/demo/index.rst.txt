@@ -1,0 +1,17 @@
+.. _section-ivabs-examples-demo:
+
+Demonstration
+===============
+
+.. ..  toctree::
+..     :maxdepth: 1
+
+..     ps_cs_airfoil_box_spar_geo
+..     ps_cs_airfoil_box_spar_lam
+..     opt_mcs_airfoil_stf
+..     ps_beam_cs_vibr
+
+
+.. opt_spar_layup
+.. opt_cs_init_twist
+.. example_uh60_sopt_stf

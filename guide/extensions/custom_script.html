@@ -1,0 +1,745 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Custom script analysis step &#8212; iVABS 0.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=ac14934e"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'guide/extensions/custom_script';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Link to Galaxy/RCAS" href="galaxy_rcas.html" />
+    <link rel="prev" title="Extensions" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../main_ivabs.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/ivabs.ico" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/ivabs.ico" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">iVABS</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../start/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../examples/tutorial/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../examples/index.html">
+                        Examples
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../ref/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../examples/benchmark/index.html">
+                        Benchmark
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../examples/verification/index.html">
+                        Verification
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../start/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../examples/tutorial/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../examples/index.html">
+                        Examples
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../ref/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
+                    More
+                </button>
+                <ul id="pst-nav-more-links-2" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../examples/benchmark/index.html">
+                        Benchmark
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../examples/verification/index.html">
+                        Verification
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/parameterization.html">Parameterization of Composite Slender Structures</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../input/index.html">Main Input</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../input/yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../input/structure.html">Global Structure Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../input/sg.html">Structure Gene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../input/function.html">Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../input/analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../input/study.html">Design Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Extensions</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Custom script analysis step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../main_ivabs.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">User Guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Extensions</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Custom...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <blockquote>
+<div></div></blockquote>
+<section id="custom-script-analysis-step">
+<span id="section-guide-analysis-script"></span><h1>Custom script analysis step<a class="headerlink" href="#custom-script-analysis-step" title="Link to this heading">#</a></h1>
+<p>The custom scripts provide users the flexibility to do calculations for special purposes that cannot be achieved using built-in functionalities in iVABS.
+Typical usages of this include the pre- and post-processing of inputs and outputs of an analysis step.</p>
+<section id="prepare-the-custom-scripts">
+<h2>Prepare the custom scripts<a class="headerlink" href="#prepare-the-custom-scripts" title="Link to this heading">#</a></h2>
+<p>The script file can be stored anywhere in the system.
+There can be multiple functions in the file and they can be named arbitrarily.
+However, there are some rules that users should follow when writing the functions so that they can be correctly called in the analysis workflow in iVABS.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These rules only apply to the functions that will be directly linked with iVABS.
+Users can still write functions freely if they are used only by other functions in the custom script, instead of iVABS.</p>
+</div>
+<p>The functions must have the following input list (names of the input variabels can be arbitrary):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sname</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>From the first input variable to the last:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">data</span></code></dt><dd><p>The core data used by iVABS.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">sname</span></code></dt><dd><p>The structure or cross-section name of the current analysis step.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">logger</span></code></dt><dd><p>The logger object for generating logging information.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">*args</span></code></dt><dd><p>Extra positional arguments provided by the user in the main input file.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">**kwargs</span></code></dt><dd><p>Extra keyword arguments provided by the user in the main input file.</p>
+</dd>
+</dl>
+<p>The key to the communication between a custom function and iVABS is following two aspects:</p>
+<ul class="simple">
+<li><p>how to get needed data from iVABS, and</p></li>
+<li><p>how to send calculated result back to iVABS.</p></li>
+</ul>
+<p>Both are done throught the data object <code class="docutils literal notranslate"><span class="pre">data</span></code>.
+This is a Python dictionary object and its data layout is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;main&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;mdao_design_variable_1&#39;</span><span class="p">:</span> <span class="n">dv_value_1</span><span class="p">,</span>
+        <span class="s1">&#39;mdao_design_variable_2&#39;</span><span class="p">:</span> <span class="n">dv_value_2</span><span class="p">,</span>
+        <span class="o">...</span>
+        <span class="s1">&#39;mdao_design_response_1&#39;</span><span class="p">:</span> <span class="n">dr_value_1</span><span class="p">,</span>
+        <span class="s1">&#39;mdao_design_response_2&#39;</span><span class="p">:</span> <span class="n">dr_value_2</span><span class="p">,</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+    <span class="s1">&#39;structure&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;parameter&#39;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s1">&#39;design&#39;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s1">&#39;css_data&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;cs_set1&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;parameter&#39;</span><span class="p">:</span> <span class="p">{},</span>
+                <span class="s1">&#39;property&#39;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s1">&#39;md1&#39;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="o">...</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;cs_set2&#39;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="o">...</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;csdb&#39;</span><span class="p">:</span> <span class="p">{},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In this data object:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">main</span></code></dt><dd><p>Data exchanged between Dakota methods (e.g., parametric study or optimization) and the structural design and analysis.
+Dakota will look for needed results in this key only.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">structure</span></code></dt><dd><p>All data related with the structure.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">sgdb</span></code></dt><dd><p>SG database.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This data object is written into three files (<code class="docutils literal notranslate"><span class="pre">msgd.data.yml</span></code>, <code class="docutils literal notranslate"><span class="pre">msgd.structure_data.yml</span></code>, and <code class="docutils literal notranslate"><span class="pre">cs_db.yml</span></code>) as interim output in the same folder as the main input file.
+Users can always check these files for more details.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>More details on the available beam properties can be found in <a class="reference internal" href="../../ref/beam_properties.html#section-beam-properties"><span class="std std-ref">Beam Properties</span></a>.</p>
+</div>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
+<section id="example-1-preproess-of-parameters-before-cross-sectional-analysis">
+<h3>Example 1: Preproess of parameters before cross-sectional analysis<a class="headerlink" href="#example-1-preproess-of-parameters-before-cross-sectional-analysis" title="Link to this heading">#</a></h3>
+<p>Suppose that there are two design variables “a” and “b” used by Dakota declared in the main input file.
+However, the real design parameter labeled in the cross-sectional template is “c”, which is defined as the average of “a” and “b”.
+Then, for the cross-sectional analysis of each iteration, we need to calculate “c” using “a” and “b” before the substitution of parameters.
+This can be done using a custom function as following.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcParamC</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">structure_name</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">structure_name</span><span class="p">][</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">structure_name</span><span class="p">][</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">data</span><span class="p">[</span><span class="n">structure_name</span><span class="p">][</span><span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span>
+</pre></div>
+</div>
+<p>The value passed to the argument <code class="docutils literal notranslate"><span class="pre">structure_name</span></code> from iVABS will always be the name of current cross-section that is going to be analyzed.</p>
+</section>
+<section id="example-2-postprocess-of-analysis-results-for-calculating-final-objectives">
+<h3>Example 2: Postprocess of analysis results for calculating final objectives<a class="headerlink" href="#example-2-postprocess-of-analysis-results-for-calculating-final-objectives" title="Link to this heading">#</a></h3>
+<p>Suppose that we are dealing with a blade analyzed using 10 cross-sections.
+The design goal here is to maximize the torsional stiffness GJ.
+Specifically, assume the optimization objective is to maximize the minimum GJ among all cross-sections.
+The objective required by Dakota is <code class="docutils literal notranslate"><span class="pre">gj_min</span></code>, declared in the main input file.
+This can be done using a custom function as following.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcMinGJ</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sname</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">gj_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_cs_name</span><span class="p">,</span> <span class="n">_cs_data</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;structure&#39;</span><span class="p">][</span><span class="s1">&#39;css_data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">gj</span> <span class="o">=</span> <span class="n">_cs_data</span><span class="p">[</span><span class="s1">&#39;property&#39;</span><span class="p">][</span><span class="s1">&#39;md1&#39;</span><span class="p">][</span><span class="s1">&#39;gj&#39;</span><span class="p">]</span>
+        <span class="n">gj_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gj</span><span class="p">)</span>
+    <span class="n">gj_min</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">gj_list</span><span class="p">)</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="s1">&#39;gj_min&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gj_min</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="include-the-custom-scripts-in-the-main-input-file">
+<span id="section-guide-analysis-script-main-input"></span><h2>Include the custom scripts in the main input file<a class="headerlink" href="#include-the-custom-scripts-in-the-main-input-file" title="Link to this heading">#</a></h2>
+<p>Consider the following arrangement of directory and files for a design study:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">main_input</span><span class="o">.</span><span class="n">yml</span>
+<span class="n">my_scripts</span><span class="o">/</span>
+    <span class="n">my_functions</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>and consider the following functions in <code class="docutils literal notranslate"><span class="pre">my_functions.py</span></code> that will be used in the analysis:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">finalProcess</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sname</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="c1"># Called as a single analysis step</span>
+    <span class="c1"># Can be used for calculating the final objectives and constraints after all analysis steps</span>
+    <span class="o">...</span>
+    <span class="n">subProcess</span><span class="p">()</span>
+    <span class="o">...</span>
+
+
+<span class="k">def</span> <span class="nf">subProcess</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>To let iVABS call these functions properly, the main input file should be configured in the following way (other inputs are omitted and represented using “…”):</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">...</span>
+
+<span class="nt">analysis</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">step</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;final</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">process&quot;</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;script&quot;</span>
+<span class="w">        </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_scripts&quot;</span>
+<span class="w">        </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;finalProcess&quot;</span>
+<span class="w">        </span><span class="nt">args</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">        </span><span class="nt">kwargs</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11</span>
+<span class="w">            </span><span class="nt">b</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+
+<span class="nt">study</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">interface</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">required_files</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;my_scripts/my_functions.py&quot;</span><span class="w">  </span><span class="c1"># or &quot;my_scripts/*&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Extensions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="galaxy_rcas.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Link to Galaxy/RCAS</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-the-custom-scripts">Prepare the custom scripts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-preproess-of-parameters-before-cross-sectional-analysis">Example 1: Preproess of parameters before cross-sectional analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-postprocess-of-analysis-results-for-calculating-final-objectives">Example 2: Postprocess of analysis results for calculating final objectives</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#include-the-custom-scripts-in-the-main-input-file">Include the custom scripts in the main input file</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/guide/extensions/custom_script.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Multiscale Structural Mechanics Group, Purdue University.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.. _kw-name:
+
+
+name
+=====
+
+
+Name of the structure.
+Used only in logging messages.
+
+
+* **Type**: String
+* **Arguments**: Arbitrary
+* **Default**: structure_0
+
+

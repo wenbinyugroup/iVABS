@@ -1,0 +1,51 @@
+.. _section-ref_keyword:
+
+Main Input Keywords
+===================
+
+..  only:: ivabs
+
+    ..  code-block:: yaml
+        :linenos:
+
+        version:
+            ...
+        structure:
+            ...
+        function:
+            ...
+        cs:
+            ...
+        analysis:
+            ...
+        study:
+            ...
+
+Keywords
+--------
+
+..  toctree::
+    :maxdepth: 1
+
+    analysis
+    builder
+    data
+    data_form
+    design
+    distribution
+    function
+    kind
+    location
+    main_file
+    model
+    name
+    parameter
+    sg_assign
+    sg
+    step
+    steps
+    structure
+    study
+    tool
+    type
+

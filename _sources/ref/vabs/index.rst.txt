@@ -1,0 +1,24 @@
+.. _section-vabs_manual:
+
+VABS Manual
+============
+
+..  toctree::
+    :maxdepth: 1
+
+    introduction
+    history
+    whatsnew
+    features
+    conventions
+    install
+    inputs/index
+    outputs/index
+    support
+    epilogue
+    references
+
+
+
+See :download:`VABS user's manual </_static/vabs_v4.1_users_manual.pdf>`.
+

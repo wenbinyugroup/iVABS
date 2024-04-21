@@ -1,0 +1,56 @@
+.. _kw-structure:
+
+
+structure
+===========================
+
+Definition of the global structure.
+
+
+
+
+Overview
+----------
+
+
+..  code-block:: yaml
+    :linenos:
+
+    structure:
+      name:
+      parameter:
+        ...
+      distribution:
+        ...
+      design:
+        ...
+      model:
+        ...
+
+
+..  list-table::
+    :header-rows: 1
+
+    * - Keyword
+      - Requirements
+      - Description
+    * - :ref:`kw-name`
+      - Required
+      - Name of the structure.
+    * - :ref:`kw-parameter`
+      - Optional
+      - Parameters of the structure.
+    * - :ref:`kw-distribution`
+      - Optional
+      - Distributions of parameters.
+    * - :ref:`kw-model`
+      - Optional
+      - Model of the structure.
+    * - :ref:`kw-sg_assign`
+      - Required
+      - Assignments of |sg| to regions.
+    * - :ref:`kw-sg`
+      - Required
+      - Specification of |sg| models.
+
+

@@ -1,0 +1,3 @@
+.. _example-anl_cs_airfoil_box_d:
+
+..  include:: /../../examples/anl_cs_airfoil_box_d/README.rst

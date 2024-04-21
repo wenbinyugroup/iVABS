@@ -1,0 +1,53 @@
+.. _tutorial-opt_cs_airfoil_box_spar_geo:
+
+Optimization of spar web locations for desired properties
+============================================================
+
+
+Problem description
+-------------------
+
+The goal is to design the composite structure of a rotor blade to match some desired beam properties.
+
+This example assumes a uniform design along the span of the blade.
+A specific topology which is a box spar design is considered for the structure, as shown in :numref:`Fig. %s <fig-cs_topo>`.
+More details about the parameterization of the structure can be found in Section: :ref:`sect-cs-param`.
+
+..  figure:: figures/cs_topo.png
+    :name: fig-cs_topo
+    :align: center
+
+    Topology of the cross-section.
+
+
+Running of the case
+-----------------------
+
+
+To run the tutorial, use the following command:
+
+..  code-block:: shell
+
+    ivabs cs_design_opt_soga.yml
+
+
+If the optimization stops for some reason, to restart the optimization without doing everything from the beginning, use the following command:
+
+..  code-block:: shell
+
+    dakota -i cs_design_opt_soga.dakota --read_restart cs_design_opt_soga.rst
+
+
+
+Steps
+-----
+
+..  toctree::
+    :maxdepth: 2
+
+    problem
+    cs_param
+    opt
+    inputs
+
+

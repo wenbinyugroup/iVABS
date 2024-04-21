@@ -1,0 +1,124 @@
+..  title:: iVABS Documentation
+
+..  meta::
+    :keywords: design optimization, composite beams, ivabs, vabs, helocopter rotor blades, wind turbine blades
+    :google-site-verification: PYAQnLb7P7jrKRGfr8OlAw_x9xGZltak28MiEU3GrV0
+
+iVABS, a VABS-based Structural Design Framework
+===============================================
+
+.. ..  toctree::
+..     :maxdepth: 1
+..     :hidden:
+
+..     Start </start/index>
+..     Guide </guide/index>
+..     Tutorials </examples/tutorial/index>
+..     Examples </examples/index>
+..     Reference </ref/index>
+
+iVABS (namely integrated VABS), is a design framework for composite slender structures (also called composite beams) such as helicopter rotor blades, wind turbine blades, high aspect ratio wings, bridges, shafts, etc.
+
+..  figure:: /figures/ivabs.png
+    :name: fig-ivabs
+    :width: 6in
+    :align: center
+
+    The iVABS framework.
+
+
+
+This framework bundles PreVABS, VABS, GEBT, Dakota, along with Python for integration among these codes and other codes.
+
+PreVABS is a preprocessor to generate composite sections with ply-level details based on a few design parameters including sectional geometry, topology, and material.
+
+VABS is a cross-sectional analysis code to to model composite slender structures as beams.
+It is resulting from  decades of university research (Georgia Tech/Utah State/Purdue) sponsored by US Army.
+
+GEBT is a geometrical exact nonlinear beam analysis code for computing linear or nonlinear, static or dynamic behavior of composite beams.
+This code can be replaced with more sophicated codes such as `MBDyn <https://public.gitlab.polimi.it/DAER/mbdyn>`_, `RCAS <https://www.flightlab.com/grcas.html>`_, `DYMORE <http://www.dymoresolutions.com>`_, `CAMRAD II <http://www.johnson-aeronautics.com/>`_, etc.
+
+`Dakota <https://dakota.sandia.gov/>`_ is a multilevel, parallel, object-oriented framework for design optimization, parameter estimation, uncertainty quantification, and sensitivity analysis.
+.. This code can be easily replaced by another design and optimization framework such as `OpenMADO <https://openmdao.org/>`_.
+
+SGIO is a collection of python scripts for integrating the codes needed in iVABS and the scripts can be modified to integrate other codes.
+To make use of SGIO, `Python3 <https://www.python.org/>`_ along with necessary packages (particularly ``numpy``, ``scipy``, and ``pyyaml``) should be installed and working on your computer.
+
+..  figure:: /figures/ivabs_components.png
+    :width: 6in
+    :align: center
+
+    The iVABS integration.
+
+
+
+
+Manual
+--------------------
+
+
+..  grid:: 2
+    :gutter: 4
+
+    ..  grid-item-card::
+
+        ..  toctree::
+            :maxdepth: 2
+
+            /start/index
+
+    ..  grid-item-card::
+
+        ..  toctree::
+            :maxdepth: 2
+
+            /guide/index
+
+    ..  grid-item-card::
+
+        ..  toctree::
+            :maxdepth: 2
+
+            /examples/tutorial/index
+            /examples/index
+
+    ..  grid-item-card::
+
+        ..  toctree::
+            :maxdepth: 2
+
+            /ref/index
+            /examples/benchmark/index
+            /examples/verification/index
+
+
+Contributing
+-----------------
+
+You are welcome to contribute to the iVABS documentation in the following ways:
+
+.. #. Suggest edits using the middle icon on the top-right corner of the page you want to change.
+
+#. `Add an issue <https://github.com/wenbinyugroup/ivabs/issues/new>`_ for bug reports or feature requests.
+#. `Start a new discussion <https://github.com/orgs/wenbinyugroup/discussions>`_ if you need help running iVABS.
+
+.. #. Modify existing files or contribute new files to `the github repository <https://github.com/wenbinyugroup/ivabs>`_.
+
+
+
+
+License
+-----------------
+
+* iVABS (excluding VABS) and its documentation is copyrighted (C) 2021- by Purdue Research Foundation and is distributed under the terms of the GNU General Public License (GPL) (version 2 or later, with an exception to allow for easier linking with external libraries).
+* VABS is a commercial code and a trial or paid license can be requested from `AnalySwift <http://analyswift.com/software-trial/>`_.
+.. * iVABS makes use of four open source codes: `Gmsh <https://gmsh.info/>`_, `Dakota <https://dakota.sandia.gov/>`_, `RapidXml <http://rapidxml.sourceforge.net/>`_, and `Boost <https://www.boost.org/>`_.
+
+
+
+
+Acknowledgement
+----------------
+
+The iVABS team at the Purdue University (PoC: Prof. Wenbin Yu) completed the software development under the BAA project "Efficient High-Fidelity Framework for Structural Design and Optimization of Composite Lifting Bodies" funded by ERDC (PoCs: Dr. Robert Haehnel from U.S. Army ERDC and Dr. Joon W. Lim from U.S. Army DEVCOM AvMC).
+

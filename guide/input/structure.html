@@ -1,0 +1,730 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Global Structure Definition &#8212; iVABS 0.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=ac14934e"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'guide/input/structure';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Structure Gene" href="sg.html" />
+    <link rel="prev" title="A Brief Introduction to YAML" href="yaml.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../main_ivabs.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/ivabs.ico" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/ivabs.ico" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">iVABS</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../start/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../examples/tutorial/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../examples/index.html">
+                        Examples
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../ref/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../examples/benchmark/index.html">
+                        Benchmark
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../examples/verification/index.html">
+                        Verification
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../start/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../examples/tutorial/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../examples/index.html">
+                        Examples
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../ref/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
+                    More
+                </button>
+                <ul id="pst-nav-more-links-2" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../examples/benchmark/index.html">
+                        Benchmark
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../examples/verification/index.html">
+                        Verification
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ivabs/parameterization.html">Parameterization of Composite Slender Structures</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Main Input</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="yaml.html">A Brief Introduction to YAML</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Global Structure Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sg.html">Structure Gene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function.html">Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis.html">Analysis Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="study.html">Design Study</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../extensions/index.html">Extensions</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/custom_script.html">Custom script analysis step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/galaxy_rcas.html">Link to Galaxy/RCAS</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../main_ivabs.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">User Guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Main Input</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Global...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <blockquote>
+<div></div></blockquote>
+<section id="global-structure-definition">
+<span id="section-input-guide-structure"></span><h1>Global Structure Definition<a class="headerlink" href="#global-structure-definition" title="Link to this heading">#</a></h1>
+<p>This block stores all information defining the structural design.
+The basic logic behind the parametric definition of a structure is as follows.</p>
+<ol class="arabic simple">
+<li><p>Create base designs of cross-sections</p></li>
+<li><p>Identify designable parameters</p></li>
+<li><p>Assign specific values to those parameters to define a specific design of the structure</p></li>
+<li><p>For iterative running of the structural analysis (such as optimizations), choose designed parameters as design variables and specify their design space (range or set)</p></li>
+</ol>
+<p>The overall layout is shown in <a class="reference internal" href="#lst-input-design-layout"><span class="std std-numref">Listing 1</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="lst-input-design-layout">
+<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">Layout of the design input block</span><a class="headerlink" href="#lst-input-design-layout" title="Link to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">structure</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
+<span class="w">  </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">  </span><span class="nt">distribution</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">  </span><span class="nt">design</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">  </span><span class="nt">cs</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+
+
+<span class="nt">cs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">    </span><span class="nt">design</span><span class="p">:</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">    </span><span class="nt">model</span><span class="p">:</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">structure</span></code> block specifies the top-level (global) structural design for the current analysis or design optimization, such as a beam structure or a plate structure.
+The cs block is a library storing a list of base designs of cross-sections that will be used for the global structure.
+Note that both <code class="docutils literal notranslate"><span class="pre">structure</span></code> and cs blocks share some common input entries.
+These entries have mostly the same input syntax and meanings.</p>
+<p>Two key entries are the <code class="docutils literal notranslate"><span class="pre">design</span></code>, which specifies the base design, and <code class="docutils literal notranslate"><span class="pre">parameter</span></code>, which specifies the designable parameters.</p>
+<p>Parameters (<code class="docutils literal notranslate"><span class="pre">parameters</span></code>) specify the values defining a specific design of the structure.
+They can be given either in a list or as distributions with respect to the structural dimensions.
+Supported parameters depend on the structural class.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information on the parameterization of beam structures and cross-sections, please check the Section <a class="reference internal" href="../ivabs/parameterization.html#section-ivabs-parameterization"><span class="std std-ref">Parameterization of Composite Slender Structures</span></a>.</p>
+</div>
+<section id="parameter-specifications-parameter">
+<h2>Parameter specifications (<code class="docutils literal notranslate"><span class="pre">parameter</span></code>)<a class="headerlink" href="#parameter-specifications-parameter" title="Link to this heading">#</a></h2>
+<p>In this section, structural design specifications are given in a list of pairs of parameter name and value.
+The basic syntax is shown in <a class="reference internal" href="#lst-input-design-param-list"><span class="std std-numref">Listing 2</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="lst-input-design-param-list">
+<div class="code-block-caption"><span class="caption-number">Listing 2 </span><span class="caption-text">Parameter list</span><a class="headerlink" href="#lst-input-design-param-list" title="Link to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">structure</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">param_1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_1</span>
+<span class="w">    </span><span class="nt">param_2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_2</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+
+<span class="nt">cs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cs1&quot;</span>
+<span class="w">    </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">param_3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_3</span>
+<span class="w">      </span><span class="nt">param_4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_4</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+</div>
+</div>
+<p>Parameter list can be used to specify a constant value for the whole structure.
+These parameters can also be varied by an optimization method.
+This is done by directly using the parameter name as the design variable name.</p>
+</section>
+<section id="distribution-of-parameters-distribution">
+<h2>Distribution of parameters (<code class="docutils literal notranslate"><span class="pre">distribution</span></code>)<a class="headerlink" href="#distribution-of-parameters-distribution" title="Link to this heading">#</a></h2>
+<p>In this section, structural parameters are defined as distribution functions with respect to the structural dimensions.
+For slender structures that will be analyzed using beam models, this means that parameters are functions of a single coordinate along the longitudinal direction (e.g., blade span).
+The basic syntax is shown in <a class="reference internal" href="#lst-input-design-param-distr"><span class="std std-numref">Listing 3</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="lst-input-design-param-distr">
+<div class="code-block-caption"><span class="caption-number">Listing 3 </span><span class="caption-text">Parameter distribution</span><a class="headerlink" href="#lst-input-design-param-distr" title="Link to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">structure</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">distribution</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
+<span class="w">      </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+</div>
+</div>
+<p>Name (<code class="docutils literal notranslate"><span class="pre">name</span></code>) can be arbitrary for each distribution.
+Function (<code class="docutils literal notranslate"><span class="pre">function</span></code>) is specified by choosing one of the built-in types such as interpolation functions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently only interpolation function is supported.</p>
+</div>
+<p>Other specifications depend on the type of function selected.</p>
+<section id="interpolation-function-function-interpolation">
+<h3>Interpolation function (<code class="docutils literal notranslate"><span class="pre">function:</span> <span class="pre">&quot;interpolation&quot;</span></code>)<a class="headerlink" href="#interpolation-function-function-interpolation" title="Link to this heading">#</a></h3>
+<p>This option creates one or multiple distribution functions by interpolating a table of data.</p>
+<div class="literal-block-wrapper docutils container" id="lst-input-design-param-distr-interp">
+<div class="code-block-caption"><span class="caption-number">Listing 4 </span><span class="caption-text">Interpolation function</span><a class="headerlink" href="#lst-input-design-param-distr-interp" title="Link to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">structure</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">distribution</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
+<span class="w">      </span><span class="nt">function</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;interpolation&quot;</span>
+<span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;linear&quot;</span>
+<span class="w">      </span><span class="nt">xnames</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;x&quot;</span>
+<span class="w">      </span><span class="nt">ynames</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;a&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">ytypes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;float&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;int&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;string&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">x1, a1, b1, c1</span>
+<span class="w">        </span><span class="no">x2, a2, b2, c2</span>
+<span class="w">        </span><span class="no">...</span>
+</pre></div>
+</div>
+</div>
+<p>This function supports two different kinds, indicated by the keyword <code class="docutils literal notranslate"><span class="pre">kind</span></code>: linear (<code class="docutils literal notranslate"><span class="pre">linear</span></code>) and previous (<code class="docutils literal notranslate"><span class="pre">previous</span></code>).
+Suppose we want to get the value y at x which locates between x1 and x2.
+Given two data (x1, y1) and (x2, y2), <code class="docutils literal notranslate"><span class="pre">linear</span></code> kind function means that y is calculated by linearly interpolating these two data.
+<code class="docutils literal notranslate"><span class="pre">previous</span></code> kind function uses the value at the location no greater than x (y=y1 in this case).</p>
+<p>The set of data is specified by multiple keywords.
+<code class="docutils literal notranslate"><span class="pre">xnames</span></code> and <code class="docutils literal notranslate"><span class="pre">ynames</span></code> are used to specify the list of names or labels of the independent and dependent variables, respectively.
+Generally, labels should be placed in square brackets, delimited by commas.
+If there is only one label, the square brackets can be omitted.
+Currently iVABS only create scalar functions with a single output.
+Hence, the labels in <code class="docutils literal notranslate"><span class="pre">ynames</span></code> indicates all the functions that will be created.</p>
+<p><code class="docutils literal notranslate"><span class="pre">data</span></code> is used to place the actual data that will be interpolated.
+This is a literal block indicated by the vertical bar (see Section <a class="reference internal" href="yaml.html#section-yaml-basic-scalars"><span class="std std-ref">Scalars</span></a>).
+Values are arranged in a tabular form.
+Each row is an entry of the data and values are separated by commas.
+If <code class="docutils literal notranslate"><span class="pre">kind</span></code> is <code class="docutils literal notranslate"><span class="pre">linear</span></code>, there should be as least two entries.
+If <code class="docutils literal notranslate"><span class="pre">kind</span></code> is <code class="docutils literal notranslate"><span class="pre">previous</span></code>, a single entry is acceptable.
+Each column is either an independent or dependent variable.
+In the most general case, the first <span class="math notranslate nohighlight">\(n\)</span> columns correspond to the <span class="math notranslate nohighlight">\(n\)</span> <code class="docutils literal notranslate"><span class="pre">xnames</span></code>.
+Then the next <span class="math notranslate nohighlight">\(m\)</span> columns correspond to the <span class="math notranslate nohighlight">\(m\)</span> <code class="docutils literal notranslate"><span class="pre">ynames</span></code>.
+Hence, the number of columns should be the same as the number of labels in both <code class="docutils literal notranslate"><span class="pre">xnames</span></code> and <code class="docutils literal notranslate"><span class="pre">ynames</span></code>.</p>
+<p>Different types of values can be specified using the keyword <code class="docutils literal notranslate"><span class="pre">ytypes</span></code>.
+By default, all values are treated as real numbers (<code class="docutils literal notranslate"><span class="pre">float</span></code>).
+Other supported types are integer numbers (<code class="docutils literal notranslate"><span class="pre">int</span></code>) and strings (<code class="docutils literal notranslate"><span class="pre">string</span></code>).
+Different parameters (<code class="docutils literal notranslate"><span class="pre">ynames</span></code>) can have the same or different types.
+If <code class="docutils literal notranslate"><span class="pre">ytypes</span></code> is a string, then the type will be applied to all parameters listed in <code class="docutils literal notranslate"><span class="pre">ynames</span></code>.
+Otherwise, <code class="docutils literal notranslate"><span class="pre">ytypes</span></code> must have the same size as <code class="docutils literal notranslate"><span class="pre">ynames</span></code>.</p>
+<p>All quantities in the data block can be marked as design variables that will be changed later by Dakota.
+The design variable name is prepended to the value followed by a colon:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ynames</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;a&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">  </span><span class="no">x1, dv2: a1, dv3: b1, c1</span>
+<span class="w">  </span><span class="no">dv1: x2, a2, dv4: b2, c2</span>
+<span class="w">  </span><span class="no">...</span>
+</pre></div>
+</div>
+<p>In this case, “dv1” to “dv4” are four design variables used by Dakota.
+During any iterative process (parametric study, optimization, etc.), values marked by the design variable names will be substituted by new values generated in the current iteration.
+It is acceptable that a quantity is marked by a label but not used in Dakota.
+In other words, values after the colon can be treated as the default ones.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="yaml.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">A Brief Introduction to YAML</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="sg.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Structure Gene</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-specifications-parameter">Parameter specifications (<code class="docutils literal notranslate"><span class="pre">parameter</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-parameters-distribution">Distribution of parameters (<code class="docutils literal notranslate"><span class="pre">distribution</span></code>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpolation-function-function-interpolation">Interpolation function (<code class="docutils literal notranslate"><span class="pre">function:</span> <span class="pre">"interpolation"</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/guide/input/structure.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Multiscale Structural Mechanics Group, Purdue University.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

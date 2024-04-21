@@ -1,0 +1,816 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Channel &#8212; iVABS 0.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=ac14934e"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ref/prevabs/contents/examples/example_channel';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Airfoil (MH-104)" href="example_airfoil.html" />
+    <link rel="prev" title="Circular tube" href="example_tube.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../main_ivabs.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/ivabs.ico" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../../../_static/ivabs.ico" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">iVABS</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../start/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../guide/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../examples/tutorial/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../examples/index.html">
+                        Examples
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../../../examples/benchmark/index.html">
+                        Benchmark
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../../../examples/verification/index.html">
+                        Verification
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../start/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../guide/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../examples/tutorial/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../examples/index.html">
+                        Examples
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
+                    More
+                </button>
+                <ul id="pst-nav-more-links-2" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../../../examples/benchmark/index.html">
+                        Benchmark
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../../../examples/verification/index.html">
+                        Verification
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../sg_templates/index.html">Cross-sectional Design Templates</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../sg_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../keyword/index.html">Main Input Keywords</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/analysis.html">analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/builder.html">builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/data.html">data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/data_form.html">data_form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/design.html">design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/distribution.html">distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/function.html">function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/kind.html">kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/location.html">location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/main_file.html">main_file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/model.html">model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/name.html">name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/parameter.html">parameter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/sg_assign.html">cs_assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/sg.html">cs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/step.html">step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/steps.html">steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/structure.html">structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/study.html">study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/tool.html">tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyword/type.html">type</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../beam_properties.html">Beam Properties</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">PreVABS Documentation</a><input checked class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Download and Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../run.html">How to Run PreVABS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../guide.html">Guide for Preparing Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guide/pre_coordinate.html">Coordinate systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guide/pre_shape.html">Geometry and shapes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guide/pre_material.html">Materials and layups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guide/pre_component.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guide/pre_recover.html">Specifications for recovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../guide/pre_overall.html">Other input settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../examples.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="example_box.html">Box beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_pipe.html">Pipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_tube.html">Circular tube</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_airfoil.html">Airfoil (MH-104)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_airfoil_recover.html">Airfoil (Recover)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_uh60a_fi.html">UH-60A (Initial Failure Analysis)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html">Change log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xml.html">Introduction to XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../vabs/index.html">VABS Manual</a><input checked class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../vabs/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../vabs/history.html">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../vabs/whatsnew.html">What is New</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../vabs/features.html">Features and Functionalities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../vabs/conventions.html">Conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../vabs/install.html">Installation and Execution</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../vabs/inputs/index.html">Inputs</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../vabs/inputs/homogenization.html">Homogenization Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../vabs/inputs/dehomogenization.html">Dehomogenization Inputs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../vabs/outputs/index.html">Outputs</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../vabs/outputs/homogenization.html">Homogenization Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../vabs/outputs/dehomogenization.html">Dehomogenization Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../vabs/support.html">Maintenance and Tech Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../vabs/epilogue.html">Epilogue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../vabs/references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../swiftcomp/index.html">SwiftComp Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gebt/index.html">GEBT Manual</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../main_ivabs.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../examples.html" class="nav-link">Examples</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Channel</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <blockquote>
+<div></div></blockquote>
+<section id="channel">
+<span id="example-channel"></span><h1>Channel<a class="headerlink" href="#channel" title="Link to this heading">#</a></h1>
+<section id="problem-description">
+<h2>Problem description<a class="headerlink" href="#problem-description" title="Link to this heading">#</a></h2>
+<figure class="align-center" id="fig-channel0">
+<a class="reference internal image-reference" href="../../../../_images/ex_channel_0.png"><img alt="../../../../_images/ex_channel_0.png" src="../../../../_images/ex_channel_0.png" style="width: 3in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 48 </span><span class="caption-text">Cross section of the pipe <a class="reference internal" href="../references.html#chen2010" id="id1"><span>[CHEN2010]</span></a>.</span><a class="headerlink" href="#fig-channel0" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This example has a cross section of a highly heterogeneous channel.
+This cross section geometry can be defined as shown in <a class="reference internal" href="#fig-channel0"><span class="std std-numref">Fig. 48</span></a> <a class="reference internal" href="../references.html#chen2010" id="id2"><span>[CHEN2010]</span></a>.
+The isotropic material properties are given in <a class="reference internal" href="#table-channel-materials"><span class="std std-numref">Table 23</span></a>.
+The layup is defined having a single layer with the thickness 0.001524 m.
+The result is shown in <a class="reference internal" href="#table-channel-result"><span class="std std-numref">Table 25</span></a> and compared with those in <a class="reference internal" href="../references.html#chen2010" id="id3"><span>[CHEN2010]</span></a>.
+Complete input files can be found in <code class="docutils literal notranslate"><span class="pre">examples\ex_channel\</span></code>, including <code class="docutils literal notranslate"><span class="pre">channel.xml</span></code> and <code class="docutils literal notranslate"><span class="pre">materials.xml</span></code>.</p>
+<figure class="align-center" id="fig-channel1">
+<a class="reference internal image-reference" href="../../../../_images/ex_channel_1.png"><img alt="../../../../_images/ex_channel_1.png" src="../../../../_images/ex_channel_1.png" style="width: 6in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 49 </span><span class="caption-text"><em>Base point</em>s, <em>Base line</em>s and <em>Segment</em>s of the channel cross section.</span><a class="headerlink" href="#fig-channel1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="fig-channel-mesh">
+<a class="reference internal image-reference" href="../../../../_images/ex_channel_mesh.png"><img alt="../../../../_images/ex_channel_mesh.png" src="../../../../_images/ex_channel_mesh.png" style="width: 4in;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 50 </span><span class="caption-text">Meshed cross section viewed in Gmsh.</span><a class="headerlink" href="#fig-channel-mesh" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<table class="table table-center" id="table-channel-materials">
+<caption><span class="caption-number">Table 23 </span><span class="caption-text">Material properties</span><a class="headerlink" href="#table-channel-materials" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Density</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(E\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\nu\)</span></p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\mathrm{kg/m^3}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\mathrm{GPa}\)</span></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>mtr1</p></td>
+<td><p>isotropic</p></td>
+<td><p>1068.69</p></td>
+<td><p>206.843</p></td>
+<td><p>0.49</p></td>
+</tr>
+</tbody>
+</table>
+<table class="table table-center" id="table-channel-layups">
+<caption><span class="caption-number">Table 24 </span><span class="caption-text">Layups</span><a class="headerlink" href="#table-channel-layups" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Layer</p></th>
+<th class="head"><p>Material</p></th>
+<th class="head"><p>Ply thickness</p></th>
+<th class="head"><p>Orientation</p></th>
+<th class="head"><p>Number of plies</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\mathrm{m}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\circ\)</span></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>layup1</p></td>
+<td><p>1</p></td>
+<td><p>mtr1</p></td>
+<td><p>0.001524</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="result">
+<h2>Result<a class="headerlink" href="#result" title="Link to this heading">#</a></h2>
+<table class="table" id="table-channel-result">
+<caption><span class="caption-number">Table 25 </span><span class="caption-text">Results</span><a class="headerlink" href="#table-channel-result" title="Link to this table">#</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\phantom{-}1.906\times 10^7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-4.779\times 10^4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-1.325\times 10^5\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.804\times 10^6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}2.417\times 10^5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}2.128\times 10^4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.417\times 10^5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}2.146\times 10^6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-7.663\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.128\times 10^4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-7.663\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}2.091\times 10^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(-4.779\times 10^4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}2.011\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}9.104\times 10^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(-1.325\times 10^5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}9.104\times 10^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}1.946\times 10^3\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<table class="table" id="table-channel-result-ref">
+<caption><span class="caption-number">Table 26 </span><span class="caption-text">Results from reference <a class="reference internal" href="../references.html#chen2010" id="id4"><span>[CHEN2010]</span></a></span><a class="headerlink" href="#table-channel-result-ref" title="Link to this table">#</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\phantom{-}1.903\times 10^7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-4.778\times 10^4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-1.325\times 10^5\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.791\times 10^6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}2.364\times 10^5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}2.122\times 10^4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.364\times 10^5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}2.137\times 10^6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-7.679\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.122\times 10^4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-7.679\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}2.086\times 10^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(-4.778\times 10^4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}2.010\times 10^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}9.102\times 10^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(-1.325\times 10^5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}0.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}9.102\times 10^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phantom{-}1.944\times 10^3\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="example_tube.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Circular tube</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="example_airfoil.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Airfoil (MH-104)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-description">Problem description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result">Result</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../../_sources/ref/prevabs/contents/examples/example_channel.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Multiscale Structural Mechanics Group, Purdue University.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

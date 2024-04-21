@@ -1,0 +1,91 @@
+.. _section-ivabs-examples:
+
+Examples
+===============
+
+
+Analysis
+---------
+
+..  grid:: 1 1 2 2
+    :gutter: 4
+
+    ..  grid-item-card::
+        :link: example-anl_cs_airfoil_box
+        :link-type: ref
+        :img-bottom: anl_cs_airfoil_box/main.png
+
+        :ref:`example-anl_cs_airfoil_box`
+
+    ..  grid-item-card::
+        :link: example-anl_cs_airfoil_box_d
+        :link-type: ref
+        :img-bottom: anl_cs_airfoil_box_d/sm11.png
+
+        :ref:`example-anl_cs_airfoil_box_d`
+
+    ..  grid-item-card::
+        :link: example-anl_distr_cs_box
+        :link-type: ref
+
+        :ref:`example-anl_distr_cs_box`
+
+    ..  grid-item-card::
+        :link: example-anl_box_beam_eigen
+        :link-type: ref
+
+        :ref:`example-anl_box_beam_eigen`
+
+
+Parametric study
+----------------
+
+..  grid:: 1 1 2 2
+    :gutter: 4
+
+    ..  grid-item-card::
+        :link: example-ps_cs_box_lam
+        :link-type: ref
+
+        :ref:`example-ps_cs_box_lam`
+
+    .. ..  grid-item-card::
+    ..     :link: example-ps_cs_airfoil_box_spar_geo
+    ..     :link-type: ref
+    ..     :img-bottom: ps_cs_airfoil_box_spar_geo/ivabs_ex_quickstart_cs_geo_params.png
+
+    ..     :ref:`example-ps_cs_airfoil_box_spar_geo`
+
+    .. ..  grid-item-card::
+    ..     :link: example-ps_cs_airfoil_box_spar_lam
+    ..     :link-type: ref
+
+    ..     :ref:`example-ps_cs_airfoil_box_spar_lam`
+
+    .. ..  grid-item-card::
+    ..     :link: example-ps_blade_eigen_fan
+    ..     :link-type: ref
+
+    ..     :ref:`example-ps_blade_eigen_fan`
+
+
+
+.. Optimization
+.. ------------
+
+.. ..  grid:: 1 1 2 2
+..     :gutter: 4
+
+..     ..  grid-item-card::
+..         :link: example-opt_distr_cs_airfoil_stf
+..         :link-type: ref
+..         :img-bottom: opt_distr_cs_airfoil_stf/ivabs_ex_uh60_sopt_stf_result_prop_compare.png
+
+..         :ref:`example-opt_distr_cs_airfoil_stf`
+
+..     ..  grid-item-card::
+..         :link: example-opt_distr_cs_airfoil_stf_mobj
+..         :link-type: ref
+
+..         :ref:`example-opt_distr_cs_airfoil_stf_mobj`
+

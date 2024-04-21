@@ -1,0 +1,50 @@
+.. _kw-distribution:
+
+distribution
+============
+
+Define distributions of parameters.
+
+Specification
+-------------
+
+**Arguments**: List of distribution specifications
+**Default**: None
+
+
+Keywords of each distribution
+
+..  list-table::
+    :header-rows: 1
+
+    * - Keyword
+      - Requirements
+      - Description
+    * - :ref:`kw-name`
+      - Required
+      - Name of the parameter(s)
+    * - :ref:`kw-function`
+      - Required
+      - Name of the function to generate the distribution
+    * - :ref:`kw-data`
+      - Optional
+      - Data to be passed to the interpolation function
+
+
+Example
+-------
+
+..  code-block:: yaml
+    :linenos:
+
+    distribution:
+      - name: 'param1'
+        function: 'f1_name'
+        ...
+      - name: 'param2'
+        function: 'f2_name'
+        data:
+          ...
+        ...
+
+

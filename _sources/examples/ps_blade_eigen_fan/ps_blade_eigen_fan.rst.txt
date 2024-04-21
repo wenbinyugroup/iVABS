@@ -1,0 +1,10 @@
+.. _example-ps_blade_eigen_fan:
+
+Beam vibration
+===============================================================
+
+Problem description
+-------------------
+
+
+

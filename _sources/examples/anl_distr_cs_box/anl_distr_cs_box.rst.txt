@@ -1,0 +1,4 @@
+.. _example-anl_distr_cs_box:
+
+..  include:: /../../examples/anl_distr_cs_box/README.rst
+

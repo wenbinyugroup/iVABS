@@ -1,0 +1,71 @@
+.. highlight:: yaml
+
+.. _section-input_guide_sg:
+
+Structure Gene
+=============================
+
+This block stores |structure gene| definitions.
+The |sg_key| block is a library storing a list of base designs of |structure genes| that will be used for the global structure.
+Note that both ``structure`` and |sg_key| blocks share some common input entries.
+These entries have mostly the same input syntax and meanings.
+The basic method defining a |structure gene| is as follows:
+
+
+#. Create a base design of the |structure genes|
+#. Identify designable parameters
+#. Assign default values to those parameters
+
+
+The overall layout is shown in :numref:`Listing %s <lst-input_sg_layout>`.
+
+..  code-block:: yaml
+    :name: lst-input_sg_layout
+    :caption: Layout of the |sg_key| input block
+
+    cs:
+      - name: ""
+        parameter:
+          ...
+        design:
+          ...
+        model:
+          ...
+      - name: ""
+        ...
+
+
+Two key entries are the ``design``, which specifies the base design, and ``parameter``, which specifies the designable parameters.
+
+..  note::
+
+    For more information on the parameterization of beam structures and cross-sections, please check the Section :ref:`section-ivabs_parameterization`.
+
+
+
+
+
+
+
+
+
+Parameter specifications (``parameter``)
+-------------------------------------------
+
+In this section, design parameters of a |sg_key| are given in a list of pairs of name and value.
+The basic syntax is shown in :numref:`Listing %s <lst-input_sg_param_list>`.
+
+..  code-block:: yaml
+    :name: lst-input_sg_param_list
+    :caption: Parameter list
+
+    cs:
+      - name: "cs1"
+        parameter:
+          param_3: value_3
+          param_4: value_4
+          ...
+
+Parameter list can be used to specify a constant value for the whole structure.
+These parameters can also be varied by an optimization method.
+This is done by directly using the parameter name as the design variable name in the :ref:`section-input_guide_study` block.

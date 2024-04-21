@@ -1,0 +1,7 @@
+.. highlight:: yaml
+
+.. _section-input_guide_function:
+
+Function
+=============================
+
