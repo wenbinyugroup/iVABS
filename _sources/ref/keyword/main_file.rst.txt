@@ -1,3 +1,5 @@
+.. _kw-main_file:
+
 main_file
 ===========
 

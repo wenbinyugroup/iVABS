@@ -2,7 +2,7 @@
 
 .. _section-input_guide_sg:
 
-Structure Gene
+|Structure gene|
 =============================
 
 This block stores |structure gene| definitions.

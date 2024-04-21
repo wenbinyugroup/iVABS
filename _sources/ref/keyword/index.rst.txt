@@ -6,7 +6,6 @@ Main Input Keywords
 ..  only:: ivabs
 
     ..  code-block:: yaml
-        :linenos:
 
         version:
             ...

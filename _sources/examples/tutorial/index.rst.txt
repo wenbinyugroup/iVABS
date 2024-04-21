@@ -11,14 +11,14 @@ Tutorials
 ..    prepare_cs_template
 
 
-..  grid:: 1 2 3 4
+.. ..  grid:: 1 2 3 4
 
-    ..  grid-item-card::
-        :margin: 2 2 0 0
-        :link: tutorial-opt_cs_airfoil_box_spar_geo
-        :link-type: ref
-        :img-bottom: opt_cs_airfoil_box_spar_geo/figures/cs_param_geo.png
+..     ..  grid-item-card::
+..         :margin: 2 2 0 0
+..         :link: tutorial-opt_cs_airfoil_box_spar_geo
+..         :link-type: ref
+..         :img-bottom: opt_cs_airfoil_box_spar_geo/figures/cs_param_geo.png
 
-        :ref:`tutorial-opt_cs_airfoil_box_spar_geo`
+..         :ref:`tutorial-opt_cs_airfoil_box_spar_geo`
 
 

@@ -44,11 +44,11 @@ This code can be replaced with more sophicated codes such as `MBDyn <https://pub
 SGIO is a collection of python scripts for integrating the codes needed in iVABS and the scripts can be modified to integrate other codes.
 To make use of SGIO, `Python3 <https://www.python.org/>`_ along with necessary packages (particularly ``numpy``, ``scipy``, and ``pyyaml``) should be installed and working on your computer.
 
-..  figure:: /figures/ivabs_components.png
-    :width: 6in
-    :align: center
+.. ..  figure:: /figures/ivabs_components.png
+..     :width: 6in
+..     :align: center
 
-    The iVABS integration.
+..     The iVABS integration.
 
 
 

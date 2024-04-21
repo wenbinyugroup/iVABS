@@ -9,19 +9,31 @@ The main input file uses the format `YAML <https://yaml.org/>`_.
 
 Overall layout of the main input file:
 
-..  code-block:: yaml
+..  only:: ivabs
 
-    version: "0.9"
-    structure:
-        # Global structure definition block
-    sg:
-        # SG block
-    function:
-        # Function block
-    analysis:
-        # Analysis steps block
-    study:
-        # Design study block
+    ..  code-block:: yaml
+
+        version: "a.b.c"
+
+        # Global structure specification
+        structure:
+            ...
+
+        # Cross-sections design specification
+        cs:
+            ...
+
+        # Functions specification
+        function:
+            ...
+
+        # Analysis steps specification
+        analysis:
+            ...
+
+        # Design study specification
+        study:
+            ...
 
 
 
