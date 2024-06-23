@@ -1,0 +1,78 @@
+.. _kw-function:
+
+
+function
+===========================
+
+
+As the root keyword
+--------------------
+
+Define functions used by other keywords.
+
+
+..  code-block:: yaml
+
+    function:
+      - name: 'f1_name'
+        ...
+      - name: 'f2_name'
+        ...
+
+
+Specification
+^^^^^^^^^^^^^^
+
+:Arguments: List of function specifications
+:Default: None
+
+
+
+Child keywords
+^^^^^^^^^^^^^^^
+
+For each function:
+
+..  list-table::
+    :header-rows: 1
+
+    * - Keyword
+      - Requirements
+      - Description
+    * - :ref:`kw-name`
+      - Required
+      - Name of the function
+    * - :ref:`kw-type`
+      - Required
+      - Type of the function
+    * - :ref:`kw-kind`
+      - Optional
+      - Kind of the interpolation function
+
+
+Example
+^^^^^^^
+
+
+
+As the child keyword of analysis step
+---------------------------------------
+
+Specify the function used in the analysis step.
+
+..  code-block:: yaml
+
+    analysis:
+      steps:
+        - step: "..."
+          type: "script"
+          module: "..."
+          function: "..."
+
+:Parent keyword: :ref:`kw-steps`
+:Arguments: String
+:Default: None
+
+Related pages
+
+* :ref:`section-guide_analysis_script`

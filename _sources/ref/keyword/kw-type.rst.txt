@@ -1,0 +1,79 @@
+.. _kw-type:
+
+type
+======
+
+As the child keyword of |sg| model
+----------------------------------
+
+|SG| model type.
+
+..  code-block:: yaml
+
+    structure:
+      cs:
+        - name: "..."
+          model:
+            type: "..."
+            ...
+          ...
+
+
+
+Specification
+^^^^^^^^^^^^^
+
+..  only:: msg
+
+    :Parent keyword: :ref:`kw-model`
+    :Arguments: Choose one from SD1\|PL1\|PL2\|BM1\|BM2
+    :Default: None
+
+    * ``SD1``: Cauchy continuum model.
+    * ``PL1``: Kirchhoff-Love plate/shell model.
+    * ``PL2``: Reissner-Mindlin plate/shell model.
+    * ``BM1``: Euler-Bernoulli beam model.
+    * ``BM2``: Timoshenko beam model.
+
+..  only:: ivabs
+
+    :Parent keyword: :ref:`kw-model`
+    :Arguments: Choose one from BM1\|BM2
+    :Default: None
+
+    * ``BM1``: Euler-Bernoulli beam model.
+    * ``BM2``: Timoshenko beam model.
+
+
+
+
+
+As the child keyword of analysis step
+-------------------------------------
+
+Type of the current analysis step.
+
+..  code-block:: yaml
+
+    analysis:
+      steps:
+        - step: "..."
+          type: "..."
+          ...
+
+
+Specification
+^^^^^^^^^^^^^
+
+:Parent keyword: :ref:`kw-steps`
+:Arguments: Choose one from cs\|script
+:Default: None
+
+
+``cs`` defines a cross-sectional analysis step.
+``script`` defines a custom step using user-provided Python scripts.
+
+
+Related pages
+
+* :ref:`section-guide_analysis_script`

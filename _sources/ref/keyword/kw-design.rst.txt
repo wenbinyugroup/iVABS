@@ -1,0 +1,74 @@
+.. _kw-design:
+
+design
+======
+
+
+As the child keyword of |sg| design
+-----------------------------------------
+
+Basic design setup of the structure.
+
+..  code-block:: yaml
+
+    cs:
+      - name: "my_cs"
+        design:
+          base_file: "..."
+          ...
+        ...
+
+Specification
+^^^^^^^^^^^^^
+
+:Parent keyword: :ref:`kw-sg`
+:Arguments: None
+:Default: None
+
+Child keywords
+^^^^^^^^^^^^^^
+
+..  list-table::
+    :header-rows: 1
+
+    * - Keyword
+      - Requirements
+      - Description
+    * - :ref:`kw-base_file`
+      - Required
+      - File name of the |structure genetic| base design
+
+Example
+^^^^^^^
+
+..  literalinclude:: /_static/main_input_ref.yml
+    :caption: Example
+    :language: yaml
+    :start-after: [structure]
+    :end-before: [structure_end]
+    :linenos:
+
+
+
+As the child keyword of |sg| model specification
+-------------------------------------------------
+
+
+Name of |sg| design.
+
+..  code-block:: yaml
+
+    structure:
+      cs:
+        - name: "my_cs_model"
+          design: "my_cs"
+          ...
+        ...
+
+
+Specification
+^^^^^^^^^^^^^
+
+:Parent keyword: :ref:`kw-sg`
+:Arguments: String
+:Default: None

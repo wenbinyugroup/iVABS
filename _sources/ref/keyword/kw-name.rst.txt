@@ -1,0 +1,23 @@
+.. _kw-name:
+
+
+name
+=====
+
+
+Name of the structure.
+Used only in logging messages.
+
+..  code-block:: yaml
+
+    structure:
+        name: "my_structure"
+        ...
+
+
+Specification
+-------------
+
+:Arguments: String
+:Default: structure_0
+:Parent keyword: :ref:`kw-structure`

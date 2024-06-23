@@ -1,0 +1,4 @@
+.. _example-opt_cs_box_lam:
+
+..  include:: /../../examples/opt_cs_box_lam/README.rst
+

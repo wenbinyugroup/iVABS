@@ -1,0 +1,11 @@
+.. _kw-sg_assign:
+
+
+|sg_assign|
+====================
+
+
+Assignments of |sg| to structural regions.
+
+
+

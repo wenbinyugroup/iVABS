@@ -1,0 +1,21 @@
+.. _kw-kind:
+
+kind
+======
+
+Kind of the interpolation function.
+
+..  code-block:: yaml
+
+    function:
+      - name: 'f1_name'
+        type: 'interpolation'
+        kind: "..."
+        ...
+
+Specification
+-------------
+
+:Parent keyword: :ref:`kw-function`
+:Arguments: String
+:Default: linear

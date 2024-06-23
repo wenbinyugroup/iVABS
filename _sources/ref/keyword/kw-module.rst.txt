@@ -1,0 +1,23 @@
+.. _kw-module:
+
+module
+======
+
+Name of the custom Python script file.
+
+..  code-block:: yaml
+
+    analysis:
+      steps:
+        - step: "..."
+          type: "script"
+          module: "..."
+
+:Parent keyword: :ref:`kw-steps`
+:Arguments: String
+:Default: None
+
+Related pages
+
+* :ref:`section-guide_analysis_script`
+

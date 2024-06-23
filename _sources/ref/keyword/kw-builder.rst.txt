@@ -1,0 +1,24 @@
+.. _kw-builder:
+
+builder
+=========
+
+Method or tool to create the |structure gene|.
+
+..  code-block:: yaml
+
+    cs:
+      - name: "my_cs"
+        builder: "..."
+        ...
+      ...
+
+Specification
+-------------
+
+:Parent keyword: :ref:`kw-sg`
+:Arguments: String
+:Default: None
+
+
+

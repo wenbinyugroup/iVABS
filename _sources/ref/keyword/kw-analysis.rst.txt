@@ -1,0 +1,81 @@
+.. _kw-analysis:
+
+
+
+analysis
+========================
+
+As the root keyword
+--------------------
+
+
+Define analysis process.
+
+..  code-block:: yaml
+
+    analysis:
+      steps:
+        - step: "step 1"
+          ...
+        - step: "step 2"
+          ...
+
+
+Specification
+^^^^^^^^^^^^^^
+
+:Arguments: None
+:Default: None
+
+
+Child keywords
+^^^^^^^^^^^^^^^
+
+..  list-table::
+    :header-rows: 1
+
+    * - Keyword
+      - Requirements
+      - Description
+    * - :ref:`kw-steps`
+      - Required
+      - Specification of analysis steps
+
+
+
+
+
+As the child keyword of analysis step
+---------------------------------------
+
+Specify the |structure genetic| analysis type.
+
+..  code-block:: yaml
+
+    analysis:
+      steps:
+        - step: "..."
+          type: "cs"
+          analysis: "..."
+
+
+Specification
+^^^^^^^^^^^^^^
+
+:Parent keyword: :ref:`kw-steps`
+:Arguments: Choose one from h\|fi
+
+* ``h``: Homogenization.
+* ``fi``: Initial failure index and strength ratio analysis.
+
+
+
+
+
+..  literalinclude:: /_static/main_input_ref.yml
+    :caption: Example
+    :language: yaml
+    :start-after: [analysis]
+    :end-before: [analysis_end]
+    :linenos:
+

@@ -25,26 +25,9 @@ Keywords
 
 ..  toctree::
     :maxdepth: 1
+    :glob:
 
-    analysis
-    builder
-    data
-    data_form
-    design
-    distribution
-    function
-    kind
-    location
-    main_file
-    model
-    name
-    parameter
-    sg_assign
-    sg
-    step
-    steps
-    structure
-    study
-    tool
-    type
+    kw-*
+
+
 

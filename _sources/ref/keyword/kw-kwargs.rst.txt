@@ -1,0 +1,31 @@
+.. _kw-kwargs:
+
+kwargs
+======
+
+As the child keyword of analysis step
+-------------------------------------
+
+Extra keyword arguments passed to the custom Python function.
+
+..  code-block:: yaml
+
+    analysis:
+      steps:
+        - step: "..."
+          type: "script"
+          kwargs:
+            kw1: arg1
+            kw2: arg2
+            ...
+
+Specification
+^^^^^^^^^^^^^
+
+:Parent keyword: :ref:`kw-steps`
+:Arguments: Dictionary
+:Default: None
+
+Related pages
+
+* :ref:`section-guide_analysis_script`

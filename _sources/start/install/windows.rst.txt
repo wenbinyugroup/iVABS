@@ -1,6 +1,8 @@
 Installation on Windows
 ========================
 
+Install prerequisites first following their own instructions.
+
 Installer (``ivabs-#.#-windows-installer.exe``)
 ------------------------------------------------
 
@@ -22,7 +24,5 @@ Portable archive (``ivabs-#.#-windows-portable.zip``)
        set PATH=%IVABS_ROOT%/bin;%PATH%
        set PYTHONPATH=%IVABS_ROOT%/scripts;%PYTHONPATH%
 
-       # If the Dakota included in the iVABS release is installed
-       set PATH=%IVABS_ROOT%/dakota/bin;%PATH%
 
 #. If you want to make this change permanent, you need to edit the environment variable in your system setting. You can try to search the system tool named "Edit environment variables for your account".

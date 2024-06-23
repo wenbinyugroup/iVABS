@@ -1,0 +1,55 @@
+.. _kw-steps:
+
+steps
+======
+
+Specification of analysis steps.
+
+..  code-block:: yaml
+
+    analysis:
+      steps:
+        - step: "step 1"
+          ...
+        - step: "step 2"
+          ...
+
+
+Specification
+-------------
+
+:Arguments: List of analysis steps
+:Default: None
+:Parent keyword: :ref:`kw-analysis`
+
+
+Child keywords
+--------------
+
+For each step:
+
+
+..  list-table::
+    :header-rows: 1
+
+    * - Keyword
+      - Requirements
+      - Description
+    * - :ref:`kw-step`
+      - Required
+      - Name of the step
+    * - :ref:`kw-type`
+      - Required
+      - Type of the step
+    * - :ref:`kw-output`
+      - Optional
+      - Output specification of the step
+    * - :ref:`kw-module`
+      - Optional
+      - Name of the custom Python script file
+    * - :ref:`kw-function`
+      - Optional
+      - Function used in the script step
+    * - :ref:`kw-kwargs`
+      - Optional
+      - Additional arguments for the function

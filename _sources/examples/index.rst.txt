@@ -27,6 +27,7 @@ Analysis
     ..  grid-item-card::
         :link: example-anl_distr_cs_box
         :link-type: ref
+        :img-bottom: /../../examples/anl_distr_cs_box/cross-sections.png
 
         :ref:`example-anl_distr_cs_box`
 
@@ -35,6 +36,13 @@ Analysis
         :link-type: ref
 
         :ref:`example-anl_box_beam_eigen`
+
+    ..  grid-item-card::
+        :link: example-anl_blade_cs_rcas
+        :link-type: ref
+        :img-bottom: /../../examples/anl_blade_cs_rcas/cross-sections.png
+
+        :ref:`example-anl_blade_cs_rcas`
 
 
 Parametric study
@@ -70,22 +78,28 @@ Parametric study
 
 
 
-.. Optimization
-.. ------------
+Optimization
+------------
 
-.. ..  grid:: 1 1 2 2
-..     :gutter: 4
+..  grid:: 1 1 2 2
+    :gutter: 4
 
-..     ..  grid-item-card::
-..         :link: example-opt_distr_cs_airfoil_stf
-..         :link-type: ref
-..         :img-bottom: opt_distr_cs_airfoil_stf/ivabs_ex_uh60_sopt_stf_result_prop_compare.png
+    ..  grid-item-card::
+        :link: example-opt_cs_box_lam
+        :link-type: ref
 
-..         :ref:`example-opt_distr_cs_airfoil_stf`
+        :ref:`example-opt_cs_box_lam`
 
-..     ..  grid-item-card::
-..         :link: example-opt_distr_cs_airfoil_stf_mobj
-..         :link-type: ref
+    .. ..  grid-item-card::
+    ..     :link: example-opt_distr_cs_airfoil_stf
+    ..     :link-type: ref
+    ..     :img-bottom: opt_distr_cs_airfoil_stf/ivabs_ex_uh60_sopt_stf_result_prop_compare.png
 
-..         :ref:`example-opt_distr_cs_airfoil_stf_mobj`
+    ..     :ref:`example-opt_distr_cs_airfoil_stf`
+
+    .. ..  grid-item-card::
+    ..     :link: example-opt_distr_cs_airfoil_stf_mobj
+    ..     :link-type: ref
+
+    ..     :ref:`example-opt_distr_cs_airfoil_stf_mobj`
 

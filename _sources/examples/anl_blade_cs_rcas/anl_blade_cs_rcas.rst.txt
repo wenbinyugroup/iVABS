@@ -1,0 +1,3 @@
+.. _example-anl_blade_cs_rcas:
+
+..  include:: /../../examples/anl_blade_cs_rcas/README.rst

@@ -1,0 +1,22 @@
+.. _kw-base_file:
+
+base_file
+==========================
+
+File name of the |structure genetic| base design, such as a PreVABS template.
+
+..  code-block:: yaml
+
+    cs:
+      - name: "my_cs"
+        design:
+          base_file: "..."
+          ...
+        ...
+
+Specification
+-------------
+
+:Parent keyword: :ref:`kw-design`
+:Arguments: String
+:Default: None

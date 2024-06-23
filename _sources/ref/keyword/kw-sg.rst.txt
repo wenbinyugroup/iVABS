@@ -1,0 +1,99 @@
+.. _kw-sg:
+
+|sg_key|
+==========================
+
+As the root keyword
+-------------------
+
+
+This block contains a list of |structure genetic| base designs.
+
+Specification
+^^^^^^^^^^^^^
+
+:Parent keyword: None
+:Arguments: List of |structure genetic| base designs
+:Default: None
+
+
+..  code-block:: yaml
+
+    cs:
+      - name: "cs_base_design_1"
+        ...
+      - name: "cs_base_design_2"
+        ...
+
+Child keywords
+^^^^^^^^^^^^^^
+
+For each |structure genetic| base design:
+
+..  list-table::
+    :header-rows: 1
+
+    * - Keyword
+      - Requirements
+      - Description
+    * - :ref:`kw-name`
+      - Required
+      - Name of the |structure genetic| base design
+    * - :ref:`kw-design`
+      - Required
+      - Basic design setup of the current |sg|
+    * - :ref:`kw-parameter`
+      - Optional
+      - Design parameters
+    * - :ref:`kw-builder`
+      - Optional
+      - Builder of the |sg|
+
+
+
+Example
+^^^^^^^
+
+..  literalinclude:: /_static/main_input_ref.yml
+    :language: yaml
+    :start-after: [sg]
+    :end-before: [sg_end]
+    :linenos:
+
+
+
+As the child keyword of structure
+----------------------------------
+
+
+|sg| model specification.
+
+
+Specification
+^^^^^^^^^^^^^
+
+:Parent keyword: :ref:`kw-structure`
+:Arguments: List of |sg| models
+:Default: None
+
+
+Child keywords
+^^^^^^^^^^^^^^
+
+For each |sg| model:
+
+..  list-table::
+    :header-rows: 1
+
+    * - Keyword
+      - Requirements
+      - Description
+    * - :ref:`kw-name`
+      - Required
+      - Name of the |sg| model
+    * - :ref:`kw-design`
+      - Required
+      - Name of the |sg| design
+    * - :ref:`kw-model`
+      - Required
+      - Specification of the constitutive model

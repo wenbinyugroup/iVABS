@@ -1,7 +1,43 @@
 
 ..  only:: msg
 
-    ..  include:: main_msg.rst
+..    ..  include:: main_msg.rst
+
+    Welcome to msg-design's documentation!
+    ======================================
+
+    ..  toctree::
+        :maxdepth: 1
+        :caption: Guide
+
+        guide/intro_yaml
+        guide/input_analysis
+        guide/input_study
+        guide/custom_script
+
+
+    ..  toctree::
+        :maxdepth: 1
+        :caption: Examples
+
+        examples/example_quickstart_param_study
+        examples/example_uh60_mopt_stf
+        examples/example_uh60_sopt_stf
+
+
+    ..  toctree::
+        :maxdepth: 1
+        :caption: Reference manual
+
+        ref/keyword/index
+        ref/beam_properties
+
+
+
+
+
+
+
 
 
 ..  only:: ivabs
@@ -9,9 +45,35 @@
     ..  include:: main_ivabs.rst
 
 
+
+
+
+
+
+
+
 ..  only:: dev
 
-    ..  include:: main_dev.rst
+..    ..  include:: main_dev.rst
+
+    Welcome to msg-design's documentation!
+    ======================================
+
+
+    ..  toctree::
+        :maxdepth: 2
+
+        dev/workflow
+        dev/data_transfer
+        dev/python/index
+
+
+    ..  toctree::
+        :maxdepth: 2
+        :caption: Reference
+
+        ref/vabs/index
+        ref/swiftcomp/index
 
 
 .. Indices and tables

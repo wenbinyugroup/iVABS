@@ -1,0 +1,24 @@
+.. _kw-study:
+
+study
+=========================================
+
+Most of the keywords in this block are the same as those of Dakota.
+See their `documentation <https://dakota.sandia.gov/sites/default/files/docs/6.17.0-release/user-html/usingdakota/reference.html>`_ for more information.
+
+Related pages:
+
+* :ref:`section-input_guide_study`
+
+
+
+
+
+..  literalinclude:: /_static/main_input_ref.yml
+    :caption: Example
+    :language: yaml
+    :start-after: [study]
+    :end-before: [study_end]
+    :linenos:
+
+

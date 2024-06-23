@@ -14,35 +14,35 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
     <script src="../../../_static/documentation_options.js?v=ac14934e"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ref/prevabs/contents/run';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -58,27 +58,23 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -101,17 +97,19 @@
 </form></div>
   </div>
 
-
-  <div class="bd-header-announcement container-fluid bd-header-announcement">
-    <div class="bd-header-announcement__content">Documentation is under construction. Please use examples as the main reference.</div>
-  </div>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">Documentation is under construction. Please use examples as the main reference.</div>
+</aside>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class="col-lg-3 navbar-header-items__start">
@@ -149,87 +147,59 @@
 <nav class="navbar-nav">
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../keyword/index.html">
-                        Main Input Keywords
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../start/index.html">
+    Getting Started
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../beam_properties.html">
-                        Beam Properties
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../start/index.html">
-                        Getting Started
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../guide/index.html">
+    User Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../guide/index.html">
-                        User Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../examples/tutorial/index.html">
-                        Tutorials
-                      </a>
-                    </li>
-                
-            <li class="nav-item dropdown">
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../examples/tutorial/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../examples/index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Reference
+  </a>
+</li>
+
+            <li class="nav-item dropdown pst-header-nav-item">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../../examples/index.html">
-                        Examples
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../examples/benchmark/index.html">
+    Benchmark
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link dropdown-item nav-internal" href="../../index.html">
-                        Reference
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../../examples/benchmark/index.html">
-                        Benchmark
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../examples/verification/index.html">
+    Verification
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../../examples/verification/index.html">
-                        Verification
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../vabs/index.html">
-                        VABS Manual
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../swiftcomp/index.html">
-                        SwiftComp Manual
-                      </a>
-                    </li>
-                
                 </ul>
             </li>
             
@@ -288,9 +258,9 @@ document.write(`
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
@@ -311,96 +281,63 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item">
+          
+          
+            <div class="navbar-item">
 <nav class="navbar-nav">
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../keyword/index.html">
-                        Main Input Keywords
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../start/index.html">
+    Getting Started
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../beam_properties.html">
-                        Beam Properties
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../start/index.html">
-                        Getting Started
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../guide/index.html">
+    User Guide
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../guide/index.html">
-                        User Guide
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../examples/tutorial/index.html">
-                        Tutorials
-                      </a>
-                    </li>
-                
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
-                    More
-                </button>
-                <ul id="pst-nav-more-links-2" class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../../examples/index.html">
-                        Examples
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../examples/tutorial/index.html">
+    Tutorials
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link dropdown-item nav-internal" href="../../index.html">
-                        Reference
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../../examples/benchmark/index.html">
-                        Benchmark
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../examples/index.html">
+    Examples
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../../examples/verification/index.html">
-                        Verification
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../vabs/index.html">
-                        VABS Manual
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Reference
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../swiftcomp/index.html">
-                        SwiftComp Manual
-                      </a>
-                    </li>
-                
-                </ul>
-            </li>
-            
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../examples/benchmark/index.html">
+    Benchmark
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../examples/verification/index.html">
+    Verification
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -430,40 +367,45 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../sg_templates/index.html">Cross-sectional Design Templates</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sg_templates/index.html">Cross-sectional Design Templates</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../sg_templates/airfoil_gbox_uni.html">Airfoil Box-spar Uniform</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../keyword/index.html">Main Input Keywords</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/analysis.html">analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/builder.html">builder</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/data.html">data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/data_form.html">data_form</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/design.html">design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/distribution.html">distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/function.html">function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/kind.html">kind</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/location.html">location</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/main_file.html">main_file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/model.html">model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/name.html">name</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/parameter.html">parameter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/sg_assign.html">cs_assignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/sg.html">cs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/step.html">step</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/steps.html">steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/structure.html">structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/study.html">study</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/tool.html">tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../keyword/type.html">type</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../keyword/index.html">Main Input Keywords</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-analysis.html">analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-args.html">args</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-base_file.html">base_file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-builder.html">builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-data.html">data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-data_form.html">data_form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-design.html">design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-distribution.html">distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-file.html">file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-function.html">function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-kind.html">kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-kwargs.html">kwargs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-location.html">location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-main_file.html">main_file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-model.html">model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-module.html">module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-name.html">name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-parameter.html">parameter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-sg.html">cs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-sg_assign.html">cs_assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-step.html">step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-steps.html">steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-structure.html">structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-study.html">study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-tool.html">tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyword/kw-type.html">type</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../beam_properties.html">Beam Properties</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">PreVABS Documentation</a><input checked class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">PreVABS Documentation</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="install.html">Download and Installation</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">How to Run PreVABS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="guide.html">Guide for Preparing Input Files</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="guide.html">Guide for Preparing Input Files</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="guide/pre_coordinate.html">Coordinate systems</a></li>
 <li class="toctree-l3"><a class="reference internal" href="guide/pre_shape.html">Geometry and shapes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="guide/pre_material.html">Materials and layups</a></li>
@@ -471,8 +413,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="guide/pre_recover.html">Specifications for recovery</a></li>
 <li class="toctree-l3"><a class="reference internal" href="guide/pre_overall.html">Other input settings</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="examples.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/example_box.html">Box beam</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/example_pipe.html">Pipe</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/example_tube.html">Circular tube</a></li>
@@ -481,34 +423,34 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="examples/example_airfoil_recover.html">Airfoil (Recover)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/example_uh60a_fi.html">UH-60A (Initial Failure Analysis)</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html">Change log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xml.html">Introduction to XML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="references.html">References</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../vabs/index.html">VABS Manual</a><input checked class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../vabs/index.html">VABS Manual</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../vabs/introduction.html">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../vabs/history.html">History</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../vabs/whatsnew.html">What is New</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../vabs/features.html">Features and Functionalities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../vabs/conventions.html">Conventions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../vabs/install.html">Installation and Execution</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../vabs/inputs/index.html">Inputs</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../vabs/inputs/index.html">Inputs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../vabs/inputs/homogenization.html">Homogenization Inputs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../vabs/inputs/dehomogenization.html">Dehomogenization Inputs</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../vabs/outputs/index.html">Outputs</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../vabs/outputs/index.html">Outputs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../vabs/outputs/homogenization.html">Homogenization Outputs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../vabs/outputs/dehomogenization.html">Dehomogenization Outputs</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../vabs/support.html">Maintenance and Tech Support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../vabs/epilogue.html">Epilogue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../vabs/references.html">References</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../swiftcomp/index.html">SwiftComp Manual</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gebt/index.html">GEBT Manual</a></li>
 </ul>
@@ -525,13 +467,13 @@ document.write(`
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -540,7 +482,7 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
@@ -608,7 +550,8 @@ However, VABS is a commercial code and you need to request the code
 and a valid license from AnalySwift (<a class="reference external" href="http://analyswift.com/">http://analyswift.com/</a>).</p>
 </div>
 <figure class="align-center" id="fig-quickstart">
-<a class="reference internal image-reference" href="../../../_images/rungui0.png"><img alt="../../../_images/rungui0.png" src="../../../_images/rungui0.png" style="width: 6.5in;" /></a>
+<a class="reference internal image-reference" href="../../../_images/rungui0.png"><img alt="../../../_images/rungui0.png" src="../../../_images/rungui0.png" style="width: 6.5in;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Figure 12 </span><span class="caption-text">Cross section with meshes generated by PreVABS and visualized by Gmsh.
 Example: <code class="docutils literal notranslate"><span class="pre">examples\ex_airfoil\mh104.xml</span></code>.</span><a class="headerlink" href="#fig-quickstart" title="Link to this image">#</a></p>
@@ -622,7 +565,7 @@ If no option is given, a list of available arguments will be printed on the scre
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prevabs</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">main_input_file_name</span><span class="o">.</span><span class="n">xml</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
-<table class="table table-center" id="id1">
+<div class="pst-scrollable-table-container"><table class="table table-center" id="id1">
 <caption><span class="caption-number">Table 6 </span><span class="caption-text">Command line options</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Option</p></th>
@@ -667,6 +610,7 @@ plots of stresses and strains after recovery</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>After version 1.4, the executable file name called by PreVABS is <code class="docutils literal notranslate"><span class="pre">VABS</span></code>.</p>
@@ -727,7 +671,8 @@ explained in Section: <a class="reference internal" href="guide/pre_recover.html
 coordinate system.</p>
 </div>
 <figure class="align-center" id="fig-post">
-<a class="reference internal image-reference" href="../../../_images/examplemh104r.png"><img alt="../../../_images/examplemh104r.png" src="../../../_images/examplemh104r.png" style="width: 6.5in;" /></a>
+<a class="reference internal image-reference" href="../../../_images/examplemh104r.png"><img alt="../../../_images/examplemh104r.png" src="../../../_images/examplemh104r.png" style="width: 6.5in;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Figure 13 </span><span class="caption-text">Visualization of strains and stresses in Gmsh.</span><a class="headerlink" href="#fig-post" title="Link to this image">#</a></p>
 </figcaption>
@@ -743,7 +688,7 @@ coordinate system.</p>
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -815,8 +760,8 @@ coordinate system.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -849,7 +794,7 @@ coordinate system.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
 </p></div>
       
     </div>

@@ -55,37 +55,61 @@ If iVABS has been installed properly, a single cross-sectional analysis will be 
 
 
 
-iVABS running options
----------------------
+iVABS command line interface
+----------------------------
 
-The general command syntax to run an iVABS study is
+Type ``ivabs -h`` to see the list of arguments and options.
 
 ..  code-block:: shell
 
-    ivabs <main_input_file> [options]
+    usage: ivabs [-h] [--loglevelcmd {debug,info,warning,error,critical}]
+                 [--loglevelfile {debug,info,warning,error,critical}] [--logfile LOGFILE]
+                 {analyze,iter,map,plot} ...
 
-Use the option ``-h`` to see the list of available options.
+    iVABS
 
-There are two running modes:
+    positional arguments:
+      {analyze,iter,map,plot}
+                            sub-command help
+        analyze             Analyze a design
+        iter                Iterative analysis
+        map                 Create a mapping of meshes between the physcial and parametric domains
+        plot                Plot all CS/SG
 
-#. Mode 0 is the default mode. It will generate Dakota input and run iterative analysis.
+    options:
+      -h, --help            show this help message and exit
+      --loglevelcmd {debug,info,warning,error,critical}
+                            Command line logging level
+      --loglevelfile {debug,info,warning,error,critical}
+                            File logging level
+      --logfile LOGFILE     Logging file name
 
-   ..  code-block:: shell
+.. The general command syntax to run an iVABS study is
 
-    ivabs <main_input_file>
+.. ..  code-block:: shell
+
+..     ivabs <main_input_file> [options]
+
+.. Use the option ``-h`` to see the list of available options.
+
+Single analysis
+^^^^^^^^^^^^^^^^
+
+..  code-block:: shell
+
+    ivabs analyze <main_input_file> [options]
 
 
-#. Mode 1 runs a single analysis.
 
-   ..  code-block:: shell
+Iterative analysis
+^^^^^^^^^^^^^^^^^^^
 
-    ivabs <main_input_file> --mode 1
+..  code-block:: shell
 
-.. #. Mode 2 only generates Dakota input. The process stops after generating the Dakota input.
+    ivabs iter <main_input_file> [options]
 
-..    ..  code-block:: shell
 
-..     python run.py main_input.yml 2
+
 
 
 

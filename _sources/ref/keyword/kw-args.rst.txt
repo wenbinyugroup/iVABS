@@ -1,0 +1,25 @@
+.. _kw-args:
+
+args
+=======
+
+.. Use under::
+
+..     analysis:
+..       steps:
+..         - step: "..."
+..           type: "script"
+..           args:
+..             - arg1
+..             - arg2
+..             - ...
+
+.. Extra positional arguments passed to the custom Python function.
+
+.. * **Optional**
+.. * **Type**: List
+
+.. Related pages
+
+.. * :ref:`section-guide_analysis_script`
+
