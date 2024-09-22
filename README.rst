@@ -1,3 +1,12 @@
+.. image:: https://img.shields.io/github/v/release/wenbinyugroup/ivabs
+   :target: https://github.com/wenbinyu/ivabs/release
+
+.. image:: https://img.shields.io/github/issues/wenbinyugroup/ivabs
+   :target: https://github.com/wenbinyugroup/ivabs/issues
+
+.. image:: https://img.shields.io/github/actions/workflow/status/wenbinyugroup/ivabs/main.yml?branch=main
+   :target: https://github.com/wenbinyugroup/ivabs/actions
+
 Introduction
 ===============
 
