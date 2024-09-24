@@ -1,94 +1,69 @@
 .. _example-anl_cs_airfoil_box:
 
-..  include:: /../../examples/anl_cs_airfoil_box/README.rst
+.. ..  include:: /../../examples/anl_cs_airfoil_box/README.rst
 
 
-
-.. Analysis of a single cross-section
-.. ============================================
-
+Analysis of a single cross-section
+============================================
 
 
-.. Running
-.. ----------------------
-
-.. ..  code-block:: shell
-
-..     ivabs main.yml --mode 1
+The task is to carry out a quick cross-sectional analysis of a specific cross-sectional design.
+Specifically, in this example, we want to set values to the locations of spar webs and get the torsional and bending stiffness (|gj|, |eiyy|, |eizz|).
 
 
-.. .. This first tutorial will give the instructions to the basic functionalities of the tool.
+Running
+----------------------
 
-.. Problem description
-.. -------------------
+Example location: `examples/anl_cs_airfoil_box`
 
-.. Suppose that we want to carry out a single cross-sectional analysis.
-.. The task is to carry out a quick cross-sectional analysis of a specific cross-sectional design.
-.. Specifically, in this example, we want to set values to the locations of spar webs and get the torsional and bending stiffness (|gj|, |eiyy|, |eizz|).
+..  code-block:: shell
 
-
-.. Input files
-.. -----------------------
-
-.. .. For this and all analysis of |msgd|, there is one top-level yaml file as the main input and a Python script to trigger the analysis.
-.. .. All others are the supporting files.
-
-.. ..  list-table:: Input files
-..     :header-rows: 1
-
-..     * - File
-..       - Description
-..     * - ``main.yml``
-..       - Main input file
-..     * - ``airfoil_simple.xml.tmp``
-..       - Cross-sectional design template
-..     * - ``SC1095.dat``
-..       - Airfoil data
-..     * - ``material_database_us_ft.xml``
-..       - Material database
-
-.. .. This tutorial mainly focuses on the main input file.
-.. .. Tutorials on other files will be explained later.
+    ivabs analyze main.yml
 
 
-.. Results
-.. ---------
+Model
+-------
 
-.. Analysis results can be found in the file ``main.out``.
+This is a very basic airfoil cross-section with a box spar, a front and a back components.
+Some basic parameters are listed below.
 
-.. ..  list-table:: Results
-..     :header-rows: 1
+..  csv-table:: Cross-section parameters
+    :header: "Name", "Value"
+    :widths: 4, 4
+    :align: center
 
-..     * - Quantity
-..       - Value
-..     * - |gj|
-..       - 2716.1390578
-..     * - |eiyy|
-..       - 4077.6188095
-..     * - |eizz|
-..       - 246963.3418
-
-
-.. Main input file specification (``main.yml``)
-.. ------------------------------------------------------------
-
-.. ..  note::
-
-..     For more details on the syntax of the YAML format, please see :ref:`section-yaml`.
+    Airfoil, SC1095
+    Coordinate origin, Trailing edge
+    Chord length, 1.0
+    Pitch angle, 0.0
 
 
+..  figure:: main.png
+    :width: 6in
+    :align: center
 
-.. Basic layout of the main input file
-.. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Cross-section.
 
-.. ..  code-block:: yaml
-..     :linenos:
 
-..     cs:
-..       # Define cross-sectional designs
+The design of the cross-section is based on a template ``airfoil_simple.xml.tmp``.
 
-..     analysis:
-..       # Define analysis steps
+
+Results
+---------
+
+Analysis results can be found in the file ``main.out``.
+
+..  list-table:: Results
+    :header-rows: 1
+
+    * - Quantity
+      - Value
+    * - |gj|
+      - 2716.1390578
+    * - |eiyy|
+      - 4077.6188095
+    * - |eizz|
+      - 246963.3418
 
 
 
@@ -150,5 +125,21 @@
 
 ..     For the complete list of available keys to get beam properties, see :ref:`section-beam_properties`.
 
+
+
+Input files
+-----------------------
+
+main.yml
+    Main input file.
+
+airfoil_simple.xml.tmp
+    Cross-sectional design template.
+
+SC1095.dat
+    Airfoil data.
+
+material_database_us_ft.xml
+    Material database.
 
 
