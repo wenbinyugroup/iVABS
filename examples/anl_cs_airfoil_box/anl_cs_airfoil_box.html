@@ -412,8 +412,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <span class="target" id="example-anl-cs-airfoil-box"></span><section id="analysis-of-a-single-cross-section">
-<h1>Analysis of a single cross-section<a class="headerlink" href="#analysis-of-a-single-cross-section" title="Link to this heading">#</a></h1>
+  <section id="analysis-of-a-single-cross-section">
+<span id="example-anl-cs-airfoil-box"></span><h1>Analysis of a single cross-section<a class="headerlink" href="#analysis-of-a-single-cross-section" title="Link to this heading">#</a></h1>
 <p>The task is to carry out a quick cross-sectional analysis of a specific cross-sectional design.
 Specifically, in this example, we want to set values to the locations of spar webs and get the torsional and bending stiffness (<span class="math notranslate nohighlight">\(GJ\)</span>, <span class="math notranslate nohighlight">\(EI_{yy}\)</span>, <span class="math notranslate nohighlight">\(EI_{zz}\)</span>).</p>
 <section id="running">
@@ -425,10 +425,17 @@ Specifically, in this example, we want to set values to the locations of spar we
 </section>
 <section id="model">
 <h2>Model<a class="headerlink" href="#model" title="Link to this heading">#</a></h2>
-<p>This is a very basic airfoil cross-section with a box spar, a front and a back components.
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/main.png"><img alt="../../_images/main.png" src="../../_images/main.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Cross-section.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This is a basic airfoil cross-section with a box spar, a front and a back components.
 Some basic parameters are listed below.</p>
-<div class="pst-scrollable-table-container"><table class="table table-center" id="id1">
-<caption><span class="caption-text">Cross-section parameters</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table table-center" id="id2">
+<caption><span class="caption-text">Cross-section parameters</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -446,7 +453,7 @@ Some basic parameters are listed below.</p>
 <td><p>Trailing edge</p></td>
 </tr>
 <tr class="row-even"><td><p>Chord length</p></td>
-<td><p>1.0</p></td>
+<td><p>1.0 <span class="math notranslate nohighlight">\(\mathrm{ft}\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>Pitch angle</p></td>
 <td><p>0.0</p></td>
@@ -454,13 +461,28 @@ Some basic parameters are listed below.</p>
 </tbody>
 </table>
 </div>
-<figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="../../_images/main.png"><img alt="../../_images/main.png" src="../../_images/main.png" style="width: 6in;" />
-</a>
-<figcaption>
-<p><span class="caption-text">Cross-section.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
+<p>The front edge of the front shear web of the box spar is located at 82% of the chord length from the trailing edge and the back edge of the back shear web is located at 58% of the chord length from the trailing edge.</p>
+<p>The laminates of the box spar, the front and the back components are made of a the same lamina with a thickness of 0.0053 <span class="math notranslate nohighlight">\(\mathrm{in}\)</span> and the following property:
+<span class="math notranslate nohighlight">\(E_{1}\)</span> <span class="math notranslate nohighlight">\(=2.8224 \times 10^9\)</span> <span class="math notranslate nohighlight">\(\mathrm{lbf/ft^2}\)</span>,
+<span class="math notranslate nohighlight">\(E_{2}\)</span> <span class="math notranslate nohighlight">\(=192.96 \times 10^6\)</span> <span class="math notranslate nohighlight">\(\mathrm{lbf/ft^2}\)</span>,
+<span class="math notranslate nohighlight">\(G_{12}\)</span> <span class="math notranslate nohighlight">\(=131.04 \times 10^6\)</span> <span class="math notranslate nohighlight">\(\mathrm{lbf/ft^2}\)</span>,
+<span class="math notranslate nohighlight">\(\nu_{12}\)</span> <span class="math notranslate nohighlight">\(=0.348\)</span>.
+The layup of the box spar is <span class="math notranslate nohighlight">\([-45/0/45/90]\)</span>.
+The layups of the front and the back components are <span class="math notranslate nohighlight">\([0]\)</span>.</p>
+<p>The front component is filled with a foam material with the following properties:
+<span class="math notranslate nohighlight">\(E\)</span> <span class="math notranslate nohighlight">\(=1.92 \times 10^6\)</span> <span class="math notranslate nohighlight">\(\mathrm{lbf/ft^2}\)</span>,
+<span class="math notranslate nohighlight">\(\nu\)</span> <span class="math notranslate nohighlight">\(=0.3\)</span>.
+The back component is filled with a honeycomb material with the following properties:
+<span class="math notranslate nohighlight">\(E_1=E_2\)</span> <span class="math notranslate nohighlight">\(=144 \times 10^3\)</span> <span class="math notranslate nohighlight">\(\mathrm{lbf/ft^2}\)</span>,
+<span class="math notranslate nohighlight">\(E_{3}\)</span> <span class="math notranslate nohighlight">\(=288 \times 10^3\)</span> <span class="math notranslate nohighlight">\(\mathrm{lbf/ft^2}\)</span>,
+<span class="math notranslate nohighlight">\(G_{12}\)</span> <span class="math notranslate nohighlight">\(=144 \times 10^3\)</span> <span class="math notranslate nohighlight">\(\mathrm{lbf/ft^2}\)</span>,
+<span class="math notranslate nohighlight">\(G_{13}\)</span> <span class="math notranslate nohighlight">\(=504 \times 10^3\)</span> <span class="math notranslate nohighlight">\(\mathrm{lbf/ft^2}\)</span>,
+<span class="math notranslate nohighlight">\(G_{23}\)</span> <span class="math notranslate nohighlight">\(=835 \times 10^3\)</span> <span class="math notranslate nohighlight">\(\mathrm{lbf/ft^2}\)</span>,
+<span class="math notranslate nohighlight">\(\nu_{12}\)</span> <span class="math notranslate nohighlight">\(=0.3\)</span>,
+<span class="math notranslate nohighlight">\(\nu_{13}=\nu_{23}\)</span> <span class="math notranslate nohighlight">\(=0.01\)</span>.</p>
+<p>The non-structural mass is modeled as a circular disk near the leading edge.
+The center of the non-structural mass is located at 96% of the chord length from the trailing edge and the radius is 0.5% of the chord length.
+The density of the non-structural mass is <span class="math notranslate nohighlight">\(22\)</span> <span class="math notranslate nohighlight">\(\mathrm{slug/ft^3}\)</span>.</p>
 <p>The design of the cross-section is based on a template <code class="docutils literal notranslate"><span class="pre">airfoil_simple.xml.tmp</span></code>.</p>
 </section>
 <section id="results">
@@ -475,13 +497,13 @@ Some basic parameters are listed below.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(GJ\)</span></p></td>
-<td><p>2716.1390578</p></td>
+<td><p><span class="math notranslate nohighlight">\(2724.5607954\)</span> <span class="math notranslate nohighlight">\(\mathrm{lbf \cdot ft^2}\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(EI_{yy}\)</span></p></td>
-<td><p>4077.6188095</p></td>
+<td><p><span class="math notranslate nohighlight">\(4077.8502077\)</span> <span class="math notranslate nohighlight">\(\mathrm{lbf \cdot ft^2}\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(EI_{zz}\)</span></p></td>
-<td><p>246963.3418</p></td>
+<td><p><span class="math notranslate nohighlight">\(247012.57502\)</span> <span class="math notranslate nohighlight">\(\mathrm{lbf \cdot ft^2}\)</span></p></td>
 </tr>
 </tbody>
 </table>

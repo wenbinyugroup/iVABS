@@ -1,8 +1,8 @@
-.. _example-anl_cs_airfoil_box:
 
 .. ..  include:: /../../examples/anl_cs_airfoil_box/README.rst
 
 
+.. _example-anl_cs_airfoil_box:
 Analysis of a single cross-section
 ============================================
 
@@ -24,7 +24,13 @@ Example location: `examples/anl_cs_airfoil_box`
 Model
 -------
 
-This is a very basic airfoil cross-section with a box spar, a front and a back components.
+..  figure:: main.png
+    :width: 80%
+    :align: center
+
+    Cross-section.
+
+This is a basic airfoil cross-section with a box spar, a front and a back components.
 Some basic parameters are listed below.
 
 ..  csv-table:: Cross-section parameters
@@ -34,16 +40,34 @@ Some basic parameters are listed below.
 
     Airfoil, SC1095
     Coordinate origin, Trailing edge
-    Chord length, 1.0
+    Chord length, 1.0 |len_im_ft|
     Pitch angle, 0.0
 
+The front edge of the front shear web of the box spar is located at 82% of the chord length from the trailing edge and the back edge of the back shear web is located at 58% of the chord length from the trailing edge.
 
-..  figure:: main.png
-    :width: 6in
-    :align: center
+The laminates of the box spar, the front and the back components are made of a the same lamina with a thickness of 0.0053 |len_im| and the following property:
+|e1| :math:`=2.8224 \times 10^9` |mod_im_ft|,
+|e2| :math:`=192.96 \times 10^6` |mod_im_ft|,
+|g12| :math:`=131.04 \times 10^6` |mod_im_ft|,
+|nu12| :math:`=0.348`.
+The layup of the box spar is :math:`[-45/0/45/90]`.
+The layups of the front and the back components are :math:`[0]`.
 
-    Cross-section.
+The front component is filled with a foam material with the following properties:
+|e| :math:`=1.92 \times 10^6` |mod_im_ft|,
+|nu| :math:`=0.3`.
+The back component is filled with a honeycomb material with the following properties:
+|e1e2| :math:`=144 \times 10^3` |mod_im_ft|,
+|e3| :math:`=288 \times 10^3` |mod_im_ft|,
+|g12| :math:`=144 \times 10^3` |mod_im_ft|,
+|g13| :math:`=504 \times 10^3` |mod_im_ft|,
+|g23| :math:`=835 \times 10^3` |mod_im_ft|,
+|nu12| :math:`=0.3`,
+|nu13nu23| :math:`=0.01`.
 
+The non-structural mass is modeled as a circular disk near the leading edge.
+The center of the non-structural mass is located at 96% of the chord length from the trailing edge and the radius is 0.5% of the chord length.
+The density of the non-structural mass is :math:`22` |den_im_ft|.
 
 The design of the cross-section is based on a template ``airfoil_simple.xml.tmp``.
 
@@ -59,11 +83,11 @@ Analysis results can be found in the file ``main.out``.
     * - Quantity
       - Value
     * - |gj|
-      - 2716.1390578
+      - :math:`2724.5607954` |stf2_im_ft|
     * - |eiyy|
-      - 4077.6188095
+      - :math:`4077.8502077` |stf2_im_ft|
     * - |eizz|
-      - 246963.3418
+      - :math:`247012.57502` |stf2_im_ft|
 
 
 
