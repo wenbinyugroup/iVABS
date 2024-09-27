@@ -17,5 +17,6 @@ This github project is for iVABS documentation. Any changes made here will be au
 Release notes
 -------------
 
-
+v0.11  (2024/06/23)
+v0.10  (2024/04/22)
 v0.7  (2022/06/10)
